@@ -141,8 +141,8 @@ export class Bitmap {
 	 * Resizes the bitmap.
 	 *
 	 * @method resize
-	 * @param {Number} width The new width of the bitmap
-	 * @param {Number} height The new height of the bitmap
+	 * @param {number} width The new width of the bitmap
+	 * @param {number} height The new height of the bitmap
 	 */
 	resize(width: number, height: number): void;
 	/**
@@ -150,22 +150,22 @@ export class Bitmap {
 	 *
 	 * @method blt
 	 * @param {Bitmap} source The bitmap to draw
-	 * @param {Number} sx The x coordinate in the source
-	 * @param {Number} sy The y coordinate in the source
-	 * @param {Number} sw The width of the source image
-	 * @param {Number} sh The height of the source image
-	 * @param {Number} dx The x coordinate in the destination
-	 * @param {Number} dy The y coordinate in the destination
-	 * @param {Number} [dw=sw] The width to draw the image in the destination
-	 * @param {Number} [dh=sh] The height to draw the image in the destination
+	 * @param {number} sx The x coordinate in the source
+	 * @param {number} sy The y coordinate in the source
+	 * @param {number} sw The width of the source image
+	 * @param {number} sh The height of the source image
+	 * @param {number} dx The x coordinate in the destination
+	 * @param {number} dy The y coordinate in the destination
+	 * @param {number} [dw=sw] The width to draw the image in the destination
+	 * @param {number} [dh=sh] The height to draw the image in the destination
 	 */
 	blt(source: Bitmap, sx: number, sy: number, sw: number, sh: number, dx: number, dy: number, dw?: number, dh?: number): void;
 	/**
 	 * Returns pixel color at the specified point.
 	 *
 	 * @method getPixel
-	 * @param {Number} x The x coordinate of the pixel in the bitmap
-	 * @param {Number} y The y coordinate of the pixel in the bitmap
+	 * @param {number} x The x coordinate of the pixel in the bitmap
+	 * @param {number} y The y coordinate of the pixel in the bitmap
 	 * @return {String} The pixel color (hex format)
 	 */
 	getPixel(x: number, y: number): string;
@@ -173,8 +173,8 @@ export class Bitmap {
 	 * Returns alpha pixel value at the specified point.
 	 *
 	 * @method getAlphaPixel
-	 * @param {Number} x The x coordinate of the pixel in the bitmap
-	 * @param {Number} y The y coordinate of the pixel in the bitmap
+	 * @param {number} x The x coordinate of the pixel in the bitmap
+	 * @param {number} y The y coordinate of the pixel in the bitmap
 	 * @return {String} The alpha value
 	 */
 	getAlphaPixel(x: number, y: number): string;
@@ -182,10 +182,10 @@ export class Bitmap {
 	 * Clears the specified rectangle.
 	 *
 	 * @method clearRect
-	 * @param {Number} x The x coordinate for the upper-left corner
-	 * @param {Number} y The y coordinate for the upper-left corner
-	 * @param {Number} width The width of the rectangle to clear
-	 * @param {Number} height The height of the rectangle to clear
+	 * @param {number} x The x coordinate for the upper-left corner
+	 * @param {number} y The y coordinate for the upper-left corner
+	 * @param {number} width The width of the rectangle to clear
+	 * @param {number} height The height of the rectangle to clear
 	 */
 	clearRect(x: number, y: number, width: number, height: number): void;
 	/**
@@ -198,10 +198,10 @@ export class Bitmap {
 	 * Fills the specified rectangle.
 	 *
 	 * @method fillRect
-	 * @param {Number} x The x coordinate for the upper-left corner
-	 * @param {Number} y The y coordinate for the upper-left corner
-	 * @param {Number} width The width of the rectangle to clear
-	 * @param {Number} height The height of the rectangle to clear
+	 * @param {number} x The x coordinate for the upper-left corner
+	 * @param {number} y The y coordinate for the upper-left corner
+	 * @param {number} width The width of the rectangle to clear
+	 * @param {number} height The height of the rectangle to clear
 	 * @param {String} color The color of the rectangle in CSS format
 	 */
 	fillRect(x: number, y: number, width: number, height: number, color: string): void;
@@ -216,10 +216,10 @@ export class Bitmap {
 	 * Draws the rectangle with a gradation.
 	 *
 	 * @method gradientFillRect
-	 * @param {Number} x The x coordinate for the upper-left corner
-	 * @param {Number} y The y coordinate for the upper-left corner
-	 * @param {Number} width The width of the rectangle to clear
-	 * @param {Number} height The height of the rectangle to clear
+	 * @param {number} x The x coordinate for the upper-left corner
+	 * @param {number} y The y coordinate for the upper-left corner
+	 * @param {number} width The width of the rectangle to clear
+	 * @param {number} height The height of the rectangle to clear
 	 * @param {String} color1 The start color of the gradation
 	 * @param {String} color2 The end color of the gradation
 	 * @param {Boolean} vertical Whether it draws a vertical gradient
@@ -229,9 +229,9 @@ export class Bitmap {
 	 * Draw the filled circle.
 	 *
 	 * @method drawCircle
-	 * @param {Number} x The x coordinate of the center of the circle
-	 * @param {Number} y The y coordinate of the center of the circle
-	 * @param {Number} radius The radius of the circle
+	 * @param {number} x The x coordinate of the center of the circle
+	 * @param {number} y The y coordinate of the center of the circle
+	 * @param {number} radius The radius of the circle
 	 * @param {String} color The color of the circle in CSS format
 	 */
 	drawCircle(x: number, y: number, radius: number, color: string): void;
@@ -240,10 +240,10 @@ export class Bitmap {
 	 *
 	 * @method drawText
 	 * @param {String} text The text that will be drawn
-	 * @param {Number} x The x coordinate for the left of the text
-	 * @param {Number} y The y coordinate for the top of the text
-	 * @param {Number} maxWidth The maximum allowed width of the text
-	 * @param {Number} lineHeight The height of the text line
+	 * @param {number} x The x coordinate for the left of the text
+	 * @param {number} y The y coordinate for the top of the text
+	 * @param {number} maxWidth The maximum allowed width of the text
+	 * @param {number} lineHeight The height of the text line
 	 * @param {String} align The alignment of the text
 	 */
 	drawText(text: string, x: number, y: number, maxWidth: number, lineHeight: number, align?: string): void;
@@ -259,16 +259,16 @@ export class Bitmap {
 	 * Changes the color tone of the entire bitmap.
 	 *
 	 * @method adjustTone
-	 * @param {Number} r The red strength in the range (-255, 255)
-	 * @param {Number} g The green strength in the range (-255, 255)
-	 * @param {Number} b The blue strength in the range (-255, 255)
+	 * @param {number} r The red strength in the range (-255, 255)
+	 * @param {number} g The green strength in the range (-255, 255)
+	 * @param {number} b The blue strength in the range (-255, 255)
 	 */
 	adjustTone(r: number, g: number, b: number): void;
 	/**
 	 * Rotates the hue of the entire bitmap.
 	 *
 	 * @method rotateHue
-	 * @param {Number} offset The hue offset in 360 degrees
+	 * @param {number} offset The hue offset in 360 degrees
 	 */
 	rotateHue(offset: number): void;
 	/**
@@ -477,8 +477,8 @@ export class Graphics {
 	 *
 	 * @static
 	 * @method initialize
-	 * @param {Number} width The width of the game screen
-	 * @param {Number} height The height of the game screen
+	 * @param {number} width The width of the game screen
+	 * @param {number} height The height of the game screen
 	 * @param {String} type The type of the renderer.
 	 *                 'canvas', 'webgl', or 'auto'.
 	 */
@@ -638,7 +638,7 @@ export class Graphics {
 	 *
 	 * @static
 	 * @method pageToCanvasX
-	 * @param {Number} x The x coordinate on the page to be converted
+	 * @param {number} x The x coordinate on the page to be converted
 	 * @return {Number} The x coordinate on the canvas area
 	 */
 	static pageToCanvasX(x: number): number;
@@ -648,7 +648,7 @@ export class Graphics {
 	 *
 	 * @static
 	 * @method pageToCanvasY
-	 * @param {Number} y The y coordinate on the page to be converted
+	 * @param {number} y The y coordinate on the page to be converted
 	 * @return {Number} The y coordinate on the canvas area
 	 */
 	static pageToCanvasY(y: number): number;
@@ -657,8 +657,8 @@ export class Graphics {
 	 *
 	 * @static
 	 * @method isInsideCanvas
-	 * @param {Number} x The x coordinate on the canvas area
-	 * @param {Number} y The y coordinate on the canvas area
+	 * @param {number} x The x coordinate on the canvas area
+	 * @param {number} y The y coordinate on the canvas area
 	 * @return {Boolean} True if the specified point is inside the game canvas area
 	 */
 	static isInsideCanvas(x: number, y: number): boolean;
@@ -759,7 +759,7 @@ export class HTML5Audio {
 	 * @static
 	 * @method play
 	 * @param {Boolean} loop Whether the audio data play in a loop
-	 * @param {Number} offset The start position to play in seconds
+	 * @param {number} offset The start position to play in seconds
 	 */
 	play(loop: boolean, offset: number): void;
 	/**
@@ -774,7 +774,7 @@ export class HTML5Audio {
 	 *
 	 * @static
 	 * @method fadeIn
-	 * @param {Number} duration Fade-in time in seconds
+	 * @param {number} duration Fade-in time in seconds
 	 */
 	fadeIn(duration: number): void;
 	/**
@@ -782,7 +782,7 @@ export class HTML5Audio {
 	 *
 	 * @static
 	 * @method fadeOut
-	 * @param {Number} duration Fade-out time in seconds
+	 * @param {number} duration Fade-out time in seconds
 	 */
 	fadeOut(duration: number): void;
 	/**
@@ -1030,8 +1030,8 @@ export class Point extends PIXI.Point {
 	 *
 	 * @class Point
 	 * @constructor
-	 * @param {Number} x The x coordinate
-	 * @param {Number} y The y coordinate
+	 * @param {number} x The x coordinate
+	 * @param {number} y The y coordinate
 	 */
 	constructor(x?: number, y?: number);
 	/**
@@ -1180,10 +1180,10 @@ export class Rectangle extends PIXI.Rectangle {
 	 *
 	 * @class Rectangle
 	 * @constructor
-	 * @param {Number} x The x coordinate for the upper-left corner
-	 * @param {Number} y The y coordinate for the upper-left corner
-	 * @param {Number} width The width of the rectangle
-	 * @param {Number} height The height of the rectangle
+	 * @param {number} x The x coordinate for the upper-left corner
+	 * @param {number} y The y coordinate for the upper-left corner
+	 * @param {number} width The width of the rectangle
+	 * @param {number} height The height of the rectangle
 	 */
 	constructor(x?: number, y?: number, width?: number, height?: number);
 	/**
@@ -2044,9 +2044,9 @@ export class ScreenSprite extends PIXI.Sprite {
 	 * Sets the color of the screen sprite by values.
 	 *
 	 * @method setColor
-	 * @param {Number} r The red value in the range (0, 255)
-	 * @param {Number} g The green value in the range (0, 255)
-	 * @param {Number} b The blue value in the range (0, 255)
+	 * @param {number} r The red value in the range (0, 255)
+	 * @param {number} g The green value in the range (0, 255)
+	 * @param {number} b The blue value in the range (0, 255)
 	 */
 	setColor(r?: number, g?: number, b?: number): void;
 }
@@ -2119,8 +2119,8 @@ export class Tilemap extends PIXI.Container {
 	 * Sets the tilemap data.
 	 *
 	 * @method setData
-	 * @param {Number} width The width of the map in number of tiles
-	 * @param {Number} height The height of the map in number of tiles
+	 * @param {number} width The width of the map in number of tiles
+	 * @param {number} height The height of the map in number of tiles
 	 * @param {Array} data The one dimensional array for the map data
 	 */
 	setData(width: number, height: number, data: number[]): void;
@@ -2162,7 +2162,7 @@ export class Tilemap extends PIXI.Container {
 	 *
 	 * @method addChildAt
 	 * @param {PIXI.DisplayObject} child The child to add
-	 * @param {Number} index The index to place the child in
+	 * @param {number} index The index to place the child in
 	 * @return {PIXI.DisplayObject} The child that was added
 	 */
 	addChildAt(child: PIXI.DisplayObject, index: number): PIXI.DisplayObject;
@@ -2178,7 +2178,7 @@ export class Tilemap extends PIXI.Container {
 	 * Removes a child from the specified index position.
 	 *
 	 * @method removeChildAt
-	 * @param {Number} index The index to get the child from
+	 * @param {number} index The index to get the child from
 	 * @return {PIXI.DisplayObject} The child that was removed
 	 */
 	removeChildAt(index: number): PIXI.DisplayObject;
@@ -2359,18 +2359,18 @@ export class Sprite extends PIXI.Sprite {
 	 * Sets the x and y at once.
 	 *
 	 * @method move
-	 * @param {Number} x The x coordinate of the sprite
-	 * @param {Number} y The y coordinate of the sprite
+	 * @param {number} x The x coordinate of the sprite
+	 * @param {number} y The y coordinate of the sprite
 	 */
 	move(x: number, y: number): void;
 	/**
 	 * Sets the rectagle of the bitmap that the sprite displays.
 	 *
 	 * @method setFrame
-	 * @param {Number} x The x coordinate of the frame
-	 * @param {Number} y The y coordinate of the frame
-	 * @param {Number} width The width of the frame
-	 * @param {Number} height The height of the frame
+	 * @param {number} x The x coordinate of the frame
+	 * @param {number} y The y coordinate of the frame
+	 * @param {number} width The width of the frame
+	 * @param {number} height The height of the frame
 	 */
 	setFrame(x: number, y: number, width: number, height: number): void;
 	/**
@@ -2414,7 +2414,7 @@ export class Sprite extends PIXI.Sprite {
 	 *
 	 * @method addChildAt
 	 * @param {PIXI.DisplayObject} child The child to add
-	 * @param {Number} index The index to place the child in
+	 * @param {number} index The index to place the child in
 	 * @return {PIXI.DisplayObject} The child that was added
 	 */
 	addChildAt(child: PIXI.DisplayObject, index: number): PIXI.DisplayObject;
@@ -2430,7 +2430,7 @@ export class Sprite extends PIXI.Sprite {
 	 * Removes a child from the specified index position.
 	 *
 	 * @method removeChildAt
-	 * @param {Number} index The index to get the child from
+	 * @param {number} index The index to get the child from
 	 * @return {PIXI.DisplayObject} The child that was removed
 	 */
 	removeChildAt(index: number): PIXI.DisplayObject;
@@ -2465,7 +2465,7 @@ export class Stage extends PIXI.Container {
 	 *
 	 * @method addChildAt
 	 * @param {PIXI.DisplayObject} child The child to add
-	 * @param {Number} index The index to place the child in
+	 * @param {number} index The index to place the child in
 	 * @return {PIXI.DisplayObject} The child that was added
 	 */
 	addChildAt(child: PIXI.DisplayObject, index: number): PIXI.DisplayObject;
@@ -2481,7 +2481,7 @@ export class Stage extends PIXI.Container {
 	 * Removes a child from the specified index position.
 	 *
 	 * @method removeChildAt
-	 * @param {Number} index The index to get the child from
+	 * @param {number} index The index to get the child from
 	 * @return {PIXI.DisplayObject} The child that was removed
 	 */
 	removeChildAt(index: number): PIXI.DisplayObject;
@@ -2637,20 +2637,20 @@ export class TilingSprite extends PIXI.TilingSprite {
 	 * Sets the x, y, width, and height all at once.
 	 *
 	 * @method move
-	 * @param {Number} x The x coordinate of the tiling sprite
-	 * @param {Number} y The y coordinate of the tiling sprite
-	 * @param {Number} width The width of the tiling sprite
-	 * @param {Number} height The height of the tiling sprite
+	 * @param {number} x The x coordinate of the tiling sprite
+	 * @param {number} y The y coordinate of the tiling sprite
+	 * @param {number} width The width of the tiling sprite
+	 * @param {number} height The height of the tiling sprite
 	 */
 	move(x?: number, y?: number, width?: number, height?: number): void;
 	/**
 	 * Specifies the region of the image that the tiling sprite will use.
 	 *
 	 * @method setFrame
-	 * @param {Number} x The x coordinate of the frame
-	 * @param {Number} y The y coordinate of the frame
-	 * @param {Number} width The width of the frame
-	 * @param {Number} height The height of the frame
+	 * @param {number} x The x coordinate of the frame
+	 * @param {number} y The y coordinate of the frame
+	 * @param {number} width The width of the frame
+	 * @param {number} height The height of the frame
 	 */
 	setFrame(x: number, y: number, width: number, height: number): void;
 	updateTransformTS(): void;
@@ -2898,23 +2898,23 @@ export class ToneFilter extends PIXI.filters.ColorMatrixFilter {
 	 * Changes the hue.
 	 *
 	 * @method adjustHue
-	 * @param {Number} value The hue value in the range (-360, 360)
+	 * @param {number} value The hue value in the range (-360, 360)
 	 */
 	adjustHue(value?: number): void;
 	/**
 	 * Changes the saturation.
 	 *
 	 * @method adjustSaturation
-	 * @param {Number} value The saturation value in the range (-255, 255)
+	 * @param {number} value The saturation value in the range (-255, 255)
 	 */
 	adjustSaturation(value?: number): void;
 	/**
 	 * Changes the tone.
 	 *
 	 * @method adjustTone
-	 * @param {Number} r The red strength in the range (-255, 255)
-	 * @param {Number} g The green strength in the range (-255, 255)
-	 * @param {Number} b The blue strength in the range (-255, 255)
+	 * @param {number} r The red strength in the range (-255, 255)
+	 * @param {number} g The green strength in the range (-255, 255)
+	 * @param {number} b The blue strength in the range (-255, 255)
 	 */
 	adjustTone(r?: number, g?: number, b?: number): void;
 }
@@ -2937,10 +2937,10 @@ export class ToneSprite extends PIXI.Container {
 	 * Sets the tone.
 	 *
 	 * @method setTone
-	 * @param {Number} r The red strength in the range (-255, 255)
-	 * @param {Number} g The green strength in the range (-255, 255)
-	 * @param {Number} b The blue strength in the range (-255, 255)
-	 * @param {Number} gray The grayscale level in the range (0, 255)
+	 * @param {number} r The red strength in the range (-255, 255)
+	 * @param {number} g The green strength in the range (-255, 255)
+	 * @param {number} b The blue strength in the range (-255, 255)
+	 * @param {number} gray The grayscale level in the range (0, 255)
 	 */
 	setTone(r: number, g: number, b: number, gray: number): void;
 }
@@ -3222,10 +3222,10 @@ export class WindowLayer extends PIXI.Container {
 	 * Sets the x, y, width, and height all at once.
 	 *
 	 * @method move
-	 * @param {Number} x The x coordinate of the window layer
-	 * @param {Number} y The y coordinate of the window layer
-	 * @param {Number} width The width of the window layer
-	 * @param {Number} height The height of the window layer
+	 * @param {number} x The x coordinate of the window layer
+	 * @param {number} y The y coordinate of the window layer
+	 * @param {number} width The width of the window layer
+	 * @param {number} height The height of the window layer
 	 */
 	move(x: number, y: number, width: number, height: number): void;
 	/**
@@ -3247,7 +3247,7 @@ export class WindowLayer extends PIXI.Container {
 	 *
 	 * @method addChildAt
 	 * @param {PIXI.DisplayObject} child The child to add
-	 * @param {Number} index The index to place the child in
+	 * @param {number} index The index to place the child in
 	 * @return {PIXI.DisplayObject} The child that was added
 	 */
 	addChildAt(child: PIXI.DisplayObject, index: number): PIXI.DisplayObject;
@@ -3263,7 +3263,7 @@ export class WindowLayer extends PIXI.Container {
 	 * Removes a child from the specified index position.
 	 *
 	 * @method removeChildAt
-	 * @param {Number} index The index to get the child from
+	 * @param {number} index The index to get the child from
 	 * @return {PIXI.DisplayObject} The child that was removed
 	 */
 	removeChildAt(index: number): PIXI.DisplayObject;
@@ -3402,10 +3402,10 @@ export class Window extends PIXI.Container {
 	 * Sets the x, y, width, and height all at once.
 	 *
 	 * @method move
-	 * @param {Number} x The x coordinate of the window
-	 * @param {Number} y The y coordinate of the window
-	 * @param {Number} width The width of the window
-	 * @param {Number} height The height of the window
+	 * @param {number} x The x coordinate of the window
+	 * @param {number} y The y coordinate of the window
+	 * @param {number} width The width of the window
+	 * @param {number} height The height of the window
 	 */
 	move(x?: number, y?: number, width?: number, height?: number): void;
 	/**
@@ -3426,19 +3426,19 @@ export class Window extends PIXI.Container {
 	 * Sets the position of the command cursor.
 	 *
 	 * @method setCursorRect
-	 * @param {Number} x The x coordinate of the cursor
-	 * @param {Number} y The y coordinate of the cursor
-	 * @param {Number} width The width of the cursor
-	 * @param {Number} height The height of the cursor
+	 * @param {number} x The x coordinate of the cursor
+	 * @param {number} y The y coordinate of the cursor
+	 * @param {number} width The width of the cursor
+	 * @param {number} height The height of the cursor
 	 */
 	setCursorRect(x?: number, y?: number, width?: number, height?: number): void;
 	/**
 	 * Changes the color of the background.
 	 *
 	 * @method setTone
-	 * @param {Number} r The red value in the range (-255, 255)
-	 * @param {Number} g The green value in the range (-255, 255)
-	 * @param {Number} b The blue value in the range (-255, 255)
+	 * @param {number} r The red value in the range (-255, 255)
+	 * @param {number} g The green value in the range (-255, 255)
+	 * @param {number} b The blue value in the range (-255, 255)
 	 */
 	setTone(r: number, g: number, b: number): void;
 	/**
@@ -3462,7 +3462,7 @@ export class Window extends PIXI.Container {
 	 *
 	 * @method addChildAt
 	 * @param {PIXI.DisplayObject} child The child to add
-	 * @param {Number} index The index to place the child in
+	 * @param {number} index The index to place the child in
 	 * @return {PIXI.DisplayObject} The child that was added
 	 */
 	addChildAt(child: PIXI.DisplayObject, index: number): PIXI.DisplayObject;
@@ -3478,7 +3478,7 @@ export class Window extends PIXI.Container {
 	 * Removes a child from the specified index position.
 	 *
 	 * @method removeChildAt
-	 * @param {Number} index The index to get the child from
+	 * @param {number} index The index to get the child from
 	 * @return {PIXI.DisplayObject} The child that was removed
 	 */
 	removeChildAt(index: number): PIXI.DisplayObject;
