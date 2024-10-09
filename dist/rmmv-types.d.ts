@@ -3167,7 +3167,7 @@ declare module "pixi.js" {
 /**
  * Allows you to map pixels to the screen or draw rectangles.
  */
-declare class Bitmap {
+export class Bitmap {
 	/**
 	 * The basic object that represents an image.
 	 *
@@ -3305,8 +3305,8 @@ declare class Bitmap {
 	 * Resizes the bitmap.
 	 *
 	 * @method resize
-	 * @param {Number} width The new width of the bitmap
-	 * @param {Number} height The new height of the bitmap
+	 * @param {number} width The new width of the bitmap
+	 * @param {number} height The new height of the bitmap
 	 */
 	resize(width: number, height: number): void;
 	/**
@@ -3314,22 +3314,22 @@ declare class Bitmap {
 	 *
 	 * @method blt
 	 * @param {Bitmap} source The bitmap to draw
-	 * @param {Number} sx The x coordinate in the source
-	 * @param {Number} sy The y coordinate in the source
-	 * @param {Number} sw The width of the source image
-	 * @param {Number} sh The height of the source image
-	 * @param {Number} dx The x coordinate in the destination
-	 * @param {Number} dy The y coordinate in the destination
-	 * @param {Number} [dw=sw] The width to draw the image in the destination
-	 * @param {Number} [dh=sh] The height to draw the image in the destination
+	 * @param {number} sx The x coordinate in the source
+	 * @param {number} sy The y coordinate in the source
+	 * @param {number} sw The width of the source image
+	 * @param {number} sh The height of the source image
+	 * @param {number} dx The x coordinate in the destination
+	 * @param {number} dy The y coordinate in the destination
+	 * @param {number} [dw=sw] The width to draw the image in the destination
+	 * @param {number} [dh=sh] The height to draw the image in the destination
 	 */
 	blt(source: Bitmap, sx: number, sy: number, sw: number, sh: number, dx: number, dy: number, dw?: number, dh?: number): void;
 	/**
 	 * Returns pixel color at the specified point.
 	 *
 	 * @method getPixel
-	 * @param {Number} x The x coordinate of the pixel in the bitmap
-	 * @param {Number} y The y coordinate of the pixel in the bitmap
+	 * @param {number} x The x coordinate of the pixel in the bitmap
+	 * @param {number} y The y coordinate of the pixel in the bitmap
 	 * @return {String} The pixel color (hex format)
 	 */
 	getPixel(x: number, y: number): string;
@@ -3337,8 +3337,8 @@ declare class Bitmap {
 	 * Returns alpha pixel value at the specified point.
 	 *
 	 * @method getAlphaPixel
-	 * @param {Number} x The x coordinate of the pixel in the bitmap
-	 * @param {Number} y The y coordinate of the pixel in the bitmap
+	 * @param {number} x The x coordinate of the pixel in the bitmap
+	 * @param {number} y The y coordinate of the pixel in the bitmap
 	 * @return {String} The alpha value
 	 */
 	getAlphaPixel(x: number, y: number): string;
@@ -3346,10 +3346,10 @@ declare class Bitmap {
 	 * Clears the specified rectangle.
 	 *
 	 * @method clearRect
-	 * @param {Number} x The x coordinate for the upper-left corner
-	 * @param {Number} y The y coordinate for the upper-left corner
-	 * @param {Number} width The width of the rectangle to clear
-	 * @param {Number} height The height of the rectangle to clear
+	 * @param {number} x The x coordinate for the upper-left corner
+	 * @param {number} y The y coordinate for the upper-left corner
+	 * @param {number} width The width of the rectangle to clear
+	 * @param {number} height The height of the rectangle to clear
 	 */
 	clearRect(x: number, y: number, width: number, height: number): void;
 	/**
@@ -3362,10 +3362,10 @@ declare class Bitmap {
 	 * Fills the specified rectangle.
 	 *
 	 * @method fillRect
-	 * @param {Number} x The x coordinate for the upper-left corner
-	 * @param {Number} y The y coordinate for the upper-left corner
-	 * @param {Number} width The width of the rectangle to clear
-	 * @param {Number} height The height of the rectangle to clear
+	 * @param {number} x The x coordinate for the upper-left corner
+	 * @param {number} y The y coordinate for the upper-left corner
+	 * @param {number} width The width of the rectangle to clear
+	 * @param {number} height The height of the rectangle to clear
 	 * @param {String} color The color of the rectangle in CSS format
 	 */
 	fillRect(x: number, y: number, width: number, height: number, color: string): void;
@@ -3380,10 +3380,10 @@ declare class Bitmap {
 	 * Draws the rectangle with a gradation.
 	 *
 	 * @method gradientFillRect
-	 * @param {Number} x The x coordinate for the upper-left corner
-	 * @param {Number} y The y coordinate for the upper-left corner
-	 * @param {Number} width The width of the rectangle to clear
-	 * @param {Number} height The height of the rectangle to clear
+	 * @param {number} x The x coordinate for the upper-left corner
+	 * @param {number} y The y coordinate for the upper-left corner
+	 * @param {number} width The width of the rectangle to clear
+	 * @param {number} height The height of the rectangle to clear
 	 * @param {String} color1 The start color of the gradation
 	 * @param {String} color2 The end color of the gradation
 	 * @param {Boolean} vertical Whether it draws a vertical gradient
@@ -3393,9 +3393,9 @@ declare class Bitmap {
 	 * Draw the filled circle.
 	 *
 	 * @method drawCircle
-	 * @param {Number} x The x coordinate of the center of the circle
-	 * @param {Number} y The y coordinate of the center of the circle
-	 * @param {Number} radius The radius of the circle
+	 * @param {number} x The x coordinate of the center of the circle
+	 * @param {number} y The y coordinate of the center of the circle
+	 * @param {number} radius The radius of the circle
 	 * @param {String} color The color of the circle in CSS format
 	 */
 	drawCircle(x: number, y: number, radius: number, color: string): void;
@@ -3404,10 +3404,10 @@ declare class Bitmap {
 	 *
 	 * @method drawText
 	 * @param {String} text The text that will be drawn
-	 * @param {Number} x The x coordinate for the left of the text
-	 * @param {Number} y The y coordinate for the top of the text
-	 * @param {Number} maxWidth The maximum allowed width of the text
-	 * @param {Number} lineHeight The height of the text line
+	 * @param {number} x The x coordinate for the left of the text
+	 * @param {number} y The y coordinate for the top of the text
+	 * @param {number} maxWidth The maximum allowed width of the text
+	 * @param {number} lineHeight The height of the text line
 	 * @param {String} align The alignment of the text
 	 */
 	drawText(text: string, x: number, y: number, maxWidth: number, lineHeight: number, align?: string): void;
@@ -3423,16 +3423,16 @@ declare class Bitmap {
 	 * Changes the color tone of the entire bitmap.
 	 *
 	 * @method adjustTone
-	 * @param {Number} r The red strength in the range (-255, 255)
-	 * @param {Number} g The green strength in the range (-255, 255)
-	 * @param {Number} b The blue strength in the range (-255, 255)
+	 * @param {number} r The red strength in the range (-255, 255)
+	 * @param {number} g The green strength in the range (-255, 255)
+	 * @param {number} b The blue strength in the range (-255, 255)
 	 */
 	adjustTone(r: number, g: number, b: number): void;
 	/**
 	 * Rotates the hue of the entire bitmap.
 	 *
 	 * @method rotateHue
-	 * @param {Number} offset The hue offset in 360 degrees
+	 * @param {number} offset The hue offset in 360 degrees
 	 */
 	rotateHue(offset: number): void;
 	/**
@@ -3488,7 +3488,7 @@ declare class Bitmap {
 	static snap(stage: Stage): Bitmap;
 }
 
-declare class CacheEntry {
+export class CacheEntry {
 	/**
 	 * The resource class. Allows to be collected as a garbage if not use for some time or ticks
 	 *
@@ -3523,7 +3523,7 @@ declare class CacheEntry {
 	touch(): void;
 }
 
-declare class CacheMap {
+export class CacheMap {
 	/**
 	 * Cache for images, audio, or any other kind of resource
 	 * @param manager
@@ -3550,7 +3550,7 @@ declare class CacheMap {
  *
  * @class Graphics
  */
-declare class Graphics {
+export class Graphics {
 	protected constructor();
 	/**
 	 * The total frame count of the game screen.
@@ -3641,8 +3641,8 @@ declare class Graphics {
 	 *
 	 * @static
 	 * @method initialize
-	 * @param {Number} width The width of the game screen
-	 * @param {Number} height The height of the game screen
+	 * @param {number} width The width of the game screen
+	 * @param {number} height The height of the game screen
 	 * @param {String} type The type of the renderer.
 	 *                 'canvas', 'webgl', or 'auto'.
 	 */
@@ -3802,7 +3802,7 @@ declare class Graphics {
 	 *
 	 * @static
 	 * @method pageToCanvasX
-	 * @param {Number} x The x coordinate on the page to be converted
+	 * @param {number} x The x coordinate on the page to be converted
 	 * @return {Number} The x coordinate on the canvas area
 	 */
 	static pageToCanvasX(x: number): number;
@@ -3812,7 +3812,7 @@ declare class Graphics {
 	 *
 	 * @static
 	 * @method pageToCanvasY
-	 * @param {Number} y The y coordinate on the page to be converted
+	 * @param {number} y The y coordinate on the page to be converted
 	 * @return {Number} The y coordinate on the canvas area
 	 */
 	static pageToCanvasY(y: number): number;
@@ -3821,8 +3821,8 @@ declare class Graphics {
 	 *
 	 * @static
 	 * @method isInsideCanvas
-	 * @param {Number} x The x coordinate on the canvas area
-	 * @param {Number} y The y coordinate on the canvas area
+	 * @param {number} x The x coordinate on the canvas area
+	 * @param {number} y The y coordinate on the canvas area
 	 * @return {Boolean} True if the specified point is inside the game canvas area
 	 */
 	static isInsideCanvas(x: number, y: number): boolean;
@@ -3833,7 +3833,7 @@ declare class Graphics {
 	static _renderer: PIXI.AbstractRenderer;
 }
 
-declare class HTML5Audio {
+export class HTML5Audio {
 	protected constructor();
 	_initialized: boolean;
 	_unlocked: boolean;
@@ -3923,7 +3923,7 @@ declare class HTML5Audio {
 	 * @static
 	 * @method play
 	 * @param {Boolean} loop Whether the audio data play in a loop
-	 * @param {Number} offset The start position to play in seconds
+	 * @param {number} offset The start position to play in seconds
 	 */
 	play(loop: boolean, offset: number): void;
 	/**
@@ -3938,7 +3938,7 @@ declare class HTML5Audio {
 	 *
 	 * @static
 	 * @method fadeIn
-	 * @param {Number} duration Fade-in time in seconds
+	 * @param {number} duration Fade-in time in seconds
 	 */
 	fadeIn(duration: number): void;
 	/**
@@ -3946,7 +3946,7 @@ declare class HTML5Audio {
 	 *
 	 * @static
 	 * @method fadeOut
-	 * @param {Number} duration Fade-out time in seconds
+	 * @param {number} duration Fade-out time in seconds
 	 */
 	fadeOut(duration: number): void;
 	/**
@@ -3958,7 +3958,7 @@ declare class HTML5Audio {
 	seek(): void;
 }
 
-declare class Input {
+export class Input {
 	protected constructor();
 	/**
 	 * The wait time of the key repeat in frames.
@@ -4090,7 +4090,7 @@ declare class Input {
  *
  * @class JsonEx
  */
-declare class JsonEx {
+export class JsonEx {
 	protected constructor();
 	/**
 	 * The maximum depth of objects.
@@ -4130,8 +4130,8 @@ declare class JsonEx {
 	static parse(json: string): any;
 }
 
-declare namespace PIXI {
-	declare class Point {
+export namespace PIXI {
+	export class Point {
 		/**
 		 * The Point object represents a location in a two-dimensional coordinate system, where x represents
 		 * the horizontal axis and y represents the vertical axis.
@@ -4188,14 +4188,14 @@ declare namespace PIXI {
 	}
 }
 
-declare class Point extends PIXI.Point {
+export class Point extends PIXI.Point {
 	/**
 	 * The point class.
 	 *
 	 * @class Point
 	 * @constructor
-	 * @param {Number} x The x coordinate
-	 * @param {Number} y The y coordinate
+	 * @param {number} x The x coordinate
+	 * @param {number} y The y coordinate
 	 */
 	constructor(x?: number, y?: number);
 	/**
@@ -4214,8 +4214,8 @@ declare class Point extends PIXI.Point {
 	y: number;
 }
 
-declare namespace pixi.core.math.shapes {
-	declare class Shape {
+export namespace pixi.core.math.shapes {
+	export class Shape {
 		protected constructor();
 		/**
 		 * Defines the type of the shape to avoid instanceof (Std.is) checks
@@ -4233,8 +4233,8 @@ declare namespace pixi.core.math.shapes {
 	}
 }
 
-declare namespace PIXI {
-	declare class Rectangle extends pixi.core.math.shapes.Shape {
+export namespace PIXI {
+	export class Rectangle extends pixi.core.math.shapes.Shape {
 		/**
 		 * the Rectangle object is an area defined by its position, as indicated by its top-left corner point (x, y) and by its width and its height.
 		 *
@@ -4338,16 +4338,16 @@ declare namespace PIXI {
 	}
 }
 
-declare class Rectangle extends PIXI.Rectangle {
+export class Rectangle extends PIXI.Rectangle {
 	/**
 	 * The rectangle class.
 	 *
 	 * @class Rectangle
 	 * @constructor
-	 * @param {Number} x The x coordinate for the upper-left corner
-	 * @param {Number} y The y coordinate for the upper-left corner
-	 * @param {Number} width The width of the rectangle
-	 * @param {Number} height The height of the rectangle
+	 * @param {number} x The x coordinate for the upper-left corner
+	 * @param {number} y The y coordinate for the upper-left corner
+	 * @param {number} width The width of the rectangle
+	 * @param {number} height The height of the rectangle
 	 */
 	constructor(x?: number, y?: number, width?: number, height?: number);
 	/**
@@ -4358,8 +4358,8 @@ declare class Rectangle extends PIXI.Rectangle {
 	static emptyRectangle: Rectangle;
 }
 
-declare namespace PIXI.utils {
-	declare class EventEmitter {
+export namespace PIXI.utils {
+	export class EventEmitter {
 		/**
 		 * Minimal EventEmitter interface that is molded against the Node.js
 		 * EventEmitter interface.
@@ -4431,8 +4431,8 @@ declare namespace PIXI.utils {
 	}
 }
 
-declare namespace PIXI.interaction {
-	declare class interactiveTarget extends PIXI.utils.EventEmitter {
+export namespace PIXI.interaction {
+	export class interactiveTarget extends PIXI.utils.EventEmitter {
 		protected constructor();
 		/**
 		 * Fired when a pointer device button (usually a mouse button) is pressed on the display
@@ -4692,7 +4692,7 @@ declare namespace PIXI.interaction {
 	}
 }
 
-declare namespace pixi.core.display {
+export namespace pixi.core.display {
 	export type DestroyOptions = {
 		/**
 		 * {boolean} [options.baseTexture=false] - Only used for child Sprites if options.children is set to true
@@ -4712,8 +4712,8 @@ declare namespace pixi.core.display {
 	}
 }
 
-declare namespace PIXI {
-	declare class DisplayObject extends PIXI.interaction.interactiveTarget {
+export namespace PIXI {
+	export class DisplayObject extends PIXI.interaction.interactiveTarget {
 		/**
 		 * The base class for all objects that are rendered on the screen.
 		 * This is an abstract class and should not be used on its own rather it should be extended.
@@ -4968,8 +4968,8 @@ declare namespace PIXI {
 	}
 }
 
-declare namespace PIXI {
-	declare class Container extends PIXI.DisplayObject {
+export namespace PIXI {
+	export class Container extends PIXI.DisplayObject {
 		/**
 		 * A Container represents a collection of display objects.
 		 * It is the base class of all display objects that act as a container for other objects.
@@ -5078,8 +5078,8 @@ declare namespace PIXI {
 	}
 }
 
-declare namespace PIXI {
-	declare class Sprite extends PIXI.Container {
+export namespace PIXI {
+	export class Sprite extends PIXI.Container {
 		/**
 		 * The Sprite object is the base for all textured objects that are rendered to the screen
 		 *
@@ -5177,7 +5177,7 @@ declare namespace PIXI {
 	}
 }
 
-declare class ScreenSprite extends PIXI.Sprite {
+export class ScreenSprite extends PIXI.Sprite {
 	/**
 	 * The sprite which covers the entire game screen.
 	 *
@@ -5208,14 +5208,14 @@ declare class ScreenSprite extends PIXI.Sprite {
 	 * Sets the color of the screen sprite by values.
 	 *
 	 * @method setColor
-	 * @param {Number} r The red value in the range (0, 255)
-	 * @param {Number} g The green value in the range (0, 255)
-	 * @param {Number} b The blue value in the range (0, 255)
+	 * @param {number} r The red value in the range (0, 255)
+	 * @param {number} g The green value in the range (0, 255)
+	 * @param {number} b The blue value in the range (0, 255)
 	 */
 	setColor(r?: number, g?: number, b?: number): void;
 }
 
-declare class Tilemap extends PIXI.Container {
+export class Tilemap extends PIXI.Container {
 	/**
 	 * [read-only] The array of children of the sprite.
 	 *
@@ -5283,8 +5283,8 @@ declare class Tilemap extends PIXI.Container {
 	 * Sets the tilemap data.
 	 *
 	 * @method setData
-	 * @param {Number} width The width of the map in number of tiles
-	 * @param {Number} height The height of the map in number of tiles
+	 * @param {number} width The width of the map in number of tiles
+	 * @param {number} height The height of the map in number of tiles
 	 * @param {Array} data The one dimensional array for the map data
 	 */
 	setData(width: number, height: number, data: number[]): void;
@@ -5326,7 +5326,7 @@ declare class Tilemap extends PIXI.Container {
 	 *
 	 * @method addChildAt
 	 * @param {PIXI.DisplayObject} child The child to add
-	 * @param {Number} index The index to place the child in
+	 * @param {number} index The index to place the child in
 	 * @return {PIXI.DisplayObject} The child that was added
 	 */
 	addChildAt(child: PIXI.DisplayObject, index: number): PIXI.DisplayObject;
@@ -5342,7 +5342,7 @@ declare class Tilemap extends PIXI.Container {
 	 * Removes a child from the specified index position.
 	 *
 	 * @method removeChildAt
-	 * @param {Number} index The index to get the child from
+	 * @param {number} index The index to get the child from
 	 * @return {PIXI.DisplayObject} The child that was removed
 	 */
 	removeChildAt(index: number): PIXI.DisplayObject;
@@ -5389,7 +5389,7 @@ declare class Tilemap extends PIXI.Container {
 	static isWaterfallTypeAutotile(tileId: number): boolean;
 }
 
-declare class ShaderTilemap extends Tilemap {
+export class ShaderTilemap extends Tilemap {
 	protected constructor();
 	/**
 	 * PIXI render method
@@ -5419,7 +5419,7 @@ declare class ShaderTilemap extends Tilemap {
 	refreshTileset(): void;
 }
 
-declare class Sprite extends PIXI.Sprite {
+export class Sprite extends PIXI.Sprite {
 	/**
 	 * The basic object that is rendered to the game screen.
 	 *
@@ -5523,18 +5523,18 @@ declare class Sprite extends PIXI.Sprite {
 	 * Sets the x and y at once.
 	 *
 	 * @method move
-	 * @param {Number} x The x coordinate of the sprite
-	 * @param {Number} y The y coordinate of the sprite
+	 * @param {number} x The x coordinate of the sprite
+	 * @param {number} y The y coordinate of the sprite
 	 */
 	move(x: number, y: number): void;
 	/**
 	 * Sets the rectagle of the bitmap that the sprite displays.
 	 *
 	 * @method setFrame
-	 * @param {Number} x The x coordinate of the frame
-	 * @param {Number} y The y coordinate of the frame
-	 * @param {Number} width The width of the frame
-	 * @param {Number} height The height of the frame
+	 * @param {number} x The x coordinate of the frame
+	 * @param {number} y The y coordinate of the frame
+	 * @param {number} width The width of the frame
+	 * @param {number} height The height of the frame
 	 */
 	setFrame(x: number, y: number, width: number, height: number): void;
 	/**
@@ -5578,7 +5578,7 @@ declare class Sprite extends PIXI.Sprite {
 	 *
 	 * @method addChildAt
 	 * @param {PIXI.DisplayObject} child The child to add
-	 * @param {Number} index The index to place the child in
+	 * @param {number} index The index to place the child in
 	 * @return {PIXI.DisplayObject} The child that was added
 	 */
 	addChildAt(child: PIXI.DisplayObject, index: number): PIXI.DisplayObject;
@@ -5594,7 +5594,7 @@ declare class Sprite extends PIXI.Sprite {
 	 * Removes a child from the specified index position.
 	 *
 	 * @method removeChildAt
-	 * @param {Number} index The index to get the child from
+	 * @param {number} index The index to get the child from
 	 * @return {PIXI.DisplayObject} The child that was removed
 	 */
 	removeChildAt(index: number): PIXI.DisplayObject;
@@ -5608,7 +5608,7 @@ declare class Sprite extends PIXI.Sprite {
 	static _counter: number;
 }
 
-declare class Stage extends PIXI.Container {
+export class Stage extends PIXI.Container {
 	/**
 	 * The root object of the display tree.
 	 *
@@ -5629,7 +5629,7 @@ declare class Stage extends PIXI.Container {
 	 *
 	 * @method addChildAt
 	 * @param {PIXI.DisplayObject} child The child to add
-	 * @param {Number} index The index to place the child in
+	 * @param {number} index The index to place the child in
 	 * @return {PIXI.DisplayObject} The child that was added
 	 */
 	addChildAt(child: PIXI.DisplayObject, index: number): PIXI.DisplayObject;
@@ -5645,14 +5645,14 @@ declare class Stage extends PIXI.Container {
 	 * Removes a child from the specified index position.
 	 *
 	 * @method removeChildAt
-	 * @param {Number} index The index to get the child from
+	 * @param {number} index The index to get the child from
 	 * @return {PIXI.DisplayObject} The child that was removed
 	 */
 	removeChildAt(index: number): PIXI.DisplayObject;
 }
 
-declare namespace PIXI {
-	declare class TilingSprite extends PIXI.Sprite {
+export namespace PIXI {
+	export class TilingSprite extends PIXI.Sprite {
 		/**
 		 * A tiling sprite is a fast way of rendering a tiling image
 		 *
@@ -5734,7 +5734,7 @@ declare namespace PIXI {
 	}
 }
 
-declare class TilingSprite extends PIXI.TilingSprite {
+export class TilingSprite extends PIXI.TilingSprite {
 	/**
 	 * The sprite object for a tiling image.
 	 *
@@ -5801,20 +5801,20 @@ declare class TilingSprite extends PIXI.TilingSprite {
 	 * Sets the x, y, width, and height all at once.
 	 *
 	 * @method move
-	 * @param {Number} x The x coordinate of the tiling sprite
-	 * @param {Number} y The y coordinate of the tiling sprite
-	 * @param {Number} width The width of the tiling sprite
-	 * @param {Number} height The height of the tiling sprite
+	 * @param {number} x The x coordinate of the tiling sprite
+	 * @param {number} y The y coordinate of the tiling sprite
+	 * @param {number} width The width of the tiling sprite
+	 * @param {number} height The height of the tiling sprite
 	 */
 	move(x?: number, y?: number, width?: number, height?: number): void;
 	/**
 	 * Specifies the region of the image that the tiling sprite will use.
 	 *
 	 * @method setFrame
-	 * @param {Number} x The x coordinate of the frame
-	 * @param {Number} y The y coordinate of the frame
-	 * @param {Number} width The width of the frame
-	 * @param {Number} height The height of the frame
+	 * @param {number} x The x coordinate of the frame
+	 * @param {number} y The y coordinate of the frame
+	 * @param {number} width The width of the frame
+	 * @param {number} height The height of the frame
 	 */
 	setFrame(x: number, y: number, width: number, height: number): void;
 	updateTransformTS(): void;
@@ -5825,8 +5825,8 @@ declare class TilingSprite extends PIXI.TilingSprite {
 	generateTilingTexture(arg: boolean): void;
 }
 
-declare namespace PIXI {
-	declare class Filter {
+export namespace PIXI {
+	export class Filter {
 		/**
 		 * @class
 		 * @memberof PIXI
@@ -5917,8 +5917,8 @@ declare namespace PIXI {
 	}
 }
 
-declare namespace PIXI.filters {
-	declare class ColorMatrixFilter extends PIXI.Filter {
+export namespace PIXI.filters {
+	export class ColorMatrixFilter extends PIXI.Filter {
 		/**
 		 * The ColorMatrixFilter class lets you apply a 5x5 matrix transformation on the RGBA
 		 * color and alpha values of every pixel on your displayObject to produce a result
@@ -6049,7 +6049,7 @@ declare namespace PIXI.filters {
 	}
 }
 
-declare class ToneFilter extends PIXI.filters.ColorMatrixFilter {
+export class ToneFilter extends PIXI.filters.ColorMatrixFilter {
 	/**
 	 * The color matrix filter for WebGL.
 	 *
@@ -6062,28 +6062,28 @@ declare class ToneFilter extends PIXI.filters.ColorMatrixFilter {
 	 * Changes the hue.
 	 *
 	 * @method adjustHue
-	 * @param {Number} value The hue value in the range (-360, 360)
+	 * @param {number} value The hue value in the range (-360, 360)
 	 */
 	adjustHue(value?: number): void;
 	/**
 	 * Changes the saturation.
 	 *
 	 * @method adjustSaturation
-	 * @param {Number} value The saturation value in the range (-255, 255)
+	 * @param {number} value The saturation value in the range (-255, 255)
 	 */
 	adjustSaturation(value?: number): void;
 	/**
 	 * Changes the tone.
 	 *
 	 * @method adjustTone
-	 * @param {Number} r The red strength in the range (-255, 255)
-	 * @param {Number} g The green strength in the range (-255, 255)
-	 * @param {Number} b The blue strength in the range (-255, 255)
+	 * @param {number} r The red strength in the range (-255, 255)
+	 * @param {number} g The green strength in the range (-255, 255)
+	 * @param {number} b The blue strength in the range (-255, 255)
 	 */
 	adjustTone(r?: number, g?: number, b?: number): void;
 }
 
-declare class ToneSprite extends PIXI.Container {
+export class ToneSprite extends PIXI.Container {
 	/**
 	 * The sprite which changes the screen color in 2D canvas mode.
 	 *
@@ -6101,21 +6101,21 @@ declare class ToneSprite extends PIXI.Container {
 	 * Sets the tone.
 	 *
 	 * @method setTone
-	 * @param {Number} r The red strength in the range (-255, 255)
-	 * @param {Number} g The green strength in the range (-255, 255)
-	 * @param {Number} b The blue strength in the range (-255, 255)
-	 * @param {Number} gray The grayscale level in the range (0, 255)
+	 * @param {number} r The red strength in the range (-255, 255)
+	 * @param {number} g The green strength in the range (-255, 255)
+	 * @param {number} b The blue strength in the range (-255, 255)
+	 * @param {number} gray The grayscale level in the range (0, 255)
 	 */
 	setTone(r: number, g: number, b: number, gray: number): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum Frames {
 		base = -1,
 	}
 }
 
-declare class TouchInput {
+export class TouchInput {
 	protected constructor();
 	static _mousePressed: boolean;
 	static _screenPressed: boolean;
@@ -6259,7 +6259,7 @@ declare class TouchInput {
 	static isReleased(): boolean;
 }
 
-declare class Utils {
+export class Utils {
 	protected constructor();
 	/**
 	 * The name of the RPG Maker. 'MV' in the current version.
@@ -6330,7 +6330,7 @@ declare class Utils {
 	static generateRuntimeId(): number;
 }
 
-declare class Weather extends PIXI.Container {
+export class Weather extends PIXI.Container {
 	/**
 	 * The weather effect which displays rain, storm, or snow.
 	 *
@@ -6367,7 +6367,7 @@ declare class Weather extends PIXI.Container {
 	update(): void;
 }
 
-declare class WindowLayer extends PIXI.Container {
+export class WindowLayer extends PIXI.Container {
 	/**
 	 * The layer which contains game windows.
 	 *
@@ -6386,10 +6386,10 @@ declare class WindowLayer extends PIXI.Container {
 	 * Sets the x, y, width, and height all at once.
 	 *
 	 * @method move
-	 * @param {Number} x The x coordinate of the window layer
-	 * @param {Number} y The y coordinate of the window layer
-	 * @param {Number} width The width of the window layer
-	 * @param {Number} height The height of the window layer
+	 * @param {number} x The x coordinate of the window layer
+	 * @param {number} y The y coordinate of the window layer
+	 * @param {number} width The width of the window layer
+	 * @param {number} height The height of the window layer
 	 */
 	move(x: number, y: number, width: number, height: number): void;
 	/**
@@ -6411,7 +6411,7 @@ declare class WindowLayer extends PIXI.Container {
 	 *
 	 * @method addChildAt
 	 * @param {PIXI.DisplayObject} child The child to add
-	 * @param {Number} index The index to place the child in
+	 * @param {number} index The index to place the child in
 	 * @return {PIXI.DisplayObject} The child that was added
 	 */
 	addChildAt(child: PIXI.DisplayObject, index: number): PIXI.DisplayObject;
@@ -6427,7 +6427,7 @@ declare class WindowLayer extends PIXI.Container {
 	 * Removes a child from the specified index position.
 	 *
 	 * @method removeChildAt
-	 * @param {Number} index The index to get the child from
+	 * @param {number} index The index to get the child from
 	 * @return {PIXI.DisplayObject} The child that was removed
 	 */
 	removeChildAt(index: number): PIXI.DisplayObject;
@@ -6445,7 +6445,7 @@ declare class WindowLayer extends PIXI.Container {
 	_renderWebGL(renderer: PIXI.Renderer): void;
 }
 
-declare class Window extends PIXI.Container {
+export class Window extends PIXI.Container {
 	/**
 	 * The visibility of the sprite.
 	 *
@@ -6566,10 +6566,10 @@ declare class Window extends PIXI.Container {
 	 * Sets the x, y, width, and height all at once.
 	 *
 	 * @method move
-	 * @param {Number} x The x coordinate of the window
-	 * @param {Number} y The y coordinate of the window
-	 * @param {Number} width The width of the window
-	 * @param {Number} height The height of the window
+	 * @param {number} x The x coordinate of the window
+	 * @param {number} y The y coordinate of the window
+	 * @param {number} width The width of the window
+	 * @param {number} height The height of the window
 	 */
 	move(x?: number, y?: number, width?: number, height?: number): void;
 	/**
@@ -6590,19 +6590,19 @@ declare class Window extends PIXI.Container {
 	 * Sets the position of the command cursor.
 	 *
 	 * @method setCursorRect
-	 * @param {Number} x The x coordinate of the cursor
-	 * @param {Number} y The y coordinate of the cursor
-	 * @param {Number} width The width of the cursor
-	 * @param {Number} height The height of the cursor
+	 * @param {number} x The x coordinate of the cursor
+	 * @param {number} y The y coordinate of the cursor
+	 * @param {number} width The width of the cursor
+	 * @param {number} height The height of the cursor
 	 */
 	setCursorRect(x?: number, y?: number, width?: number, height?: number): void;
 	/**
 	 * Changes the color of the background.
 	 *
 	 * @method setTone
-	 * @param {Number} r The red value in the range (-255, 255)
-	 * @param {Number} g The green value in the range (-255, 255)
-	 * @param {Number} b The blue value in the range (-255, 255)
+	 * @param {number} r The red value in the range (-255, 255)
+	 * @param {number} g The green value in the range (-255, 255)
+	 * @param {number} b The blue value in the range (-255, 255)
 	 */
 	setTone(r: number, g: number, b: number): void;
 	/**
@@ -6626,7 +6626,7 @@ declare class Window extends PIXI.Container {
 	 *
 	 * @method addChildAt
 	 * @param {PIXI.DisplayObject} child The child to add
-	 * @param {Number} index The index to place the child in
+	 * @param {number} index The index to place the child in
 	 * @return {PIXI.DisplayObject} The child that was added
 	 */
 	addChildAt(child: PIXI.DisplayObject, index: number): PIXI.DisplayObject;
@@ -6642,7 +6642,7 @@ declare class Window extends PIXI.Container {
 	 * Removes a child from the specified index position.
 	 *
 	 * @method removeChildAt
-	 * @param {Number} index The index to get the child from
+	 * @param {number} index The index to get the child from
 	 * @return {PIXI.DisplayObject} The child that was removed
 	 */
 	removeChildAt(index: number): PIXI.DisplayObject;
@@ -6680,7 +6680,7 @@ declare class Window extends PIXI.Container {
 	updateTransform(): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type AudioParameters = {
 		name: string;
 		pan: number;
@@ -6693,7 +6693,7 @@ declare namespace rm.types {
 /**
  * Static class that handles BGM, BGS, ME, and SE.
  */
-declare class AudioManager {
+export class AudioManager {
 	protected constructor();
 	static _bgmVolume: number;
 	static _bgsVolume: number;
@@ -6753,7 +6753,7 @@ declare class AudioManager {
 	static createDecryptBuffer(url: string, bgm: rm.types.AudioParameters, pos?: number): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * A superclass of actor, class, skill, item, weapon, armor, enemy, and state.
 	 *
@@ -6781,7 +6781,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type BattleRewards = {
 		exp: number;
 		gold: number;
@@ -6789,7 +6789,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum BattleResult {
 		base = -1,
 	}
@@ -6799,7 +6799,7 @@ declare namespace rm.types {
  * Manages the game battles to process all of the
  * events that happen within.
  */
-declare class BattleManager {
+export class BattleManager {
 	protected constructor();
 	_phase: string;
 	_canEscape: boolean;
@@ -6905,7 +6905,7 @@ declare class BattleManager {
 	static gainDropItems(): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type TextState = {
 		index: number;
 		left: number;
@@ -6916,11 +6916,11 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 
 }
 
-declare class Window_Base extends Window {
+export class Window_Base extends Window {
 	/**
 	 * Creates an instance of Window_Base.
 	 * @param {number} x
@@ -7672,7 +7672,7 @@ declare class Window_Base extends Window {
 	static _faceHeight: number;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type ConfigData = {
 		alwaysDash: boolean;
 		bgmVolume: number;
@@ -7686,7 +7686,7 @@ declare namespace rm.types {
 /**
  * Manages the configuration of RPGMakerMZ Config Data.
  */
-declare class ConfigManager {
+export class ConfigManager {
 	protected constructor();
 	static load(): void;
 	static save(): void;
@@ -7700,7 +7700,7 @@ declare class ConfigManager {
  * Manages the game data: saving, loading, meta data,
  * and map information.
  */
-declare class DataManager {
+export class DataManager {
 	protected constructor();
 	static _globalId: string;
 	static _lastAccessId: number;
@@ -7844,7 +7844,7 @@ declare class DataManager {
  * Static class that manages images. Loading the images
  * and create bitmap objects.
  */
-declare class ImageManager {
+export class ImageManager {
 	protected constructor();
 	static cache: CacheMap;
 	static loadFace(filename: string, hue?: number): Bitmap;
@@ -8021,7 +8021,7 @@ declare class ImageManager {
 	static isZeroParallax(filename: string): boolean;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * Plugin Settings for RPGMakerMV/MZ
 	 */
@@ -8052,7 +8052,7 @@ declare namespace rm.types {
 /**
  * Static class that manages plugins
  */
-declare class PluginManager {
+export class PluginManager {
 	protected constructor();
 	static _path: string;
 	static _scripts: string[];
@@ -8118,7 +8118,7 @@ declare class PluginManager {
 /**
  * Manages the scenes of the game.
  */
-declare class SceneManager {
+export class SceneManager {
 	protected constructor();
 	static _scene: Scene_Base;
 	static _nextScene: Scene_Base;
@@ -8194,7 +8194,7 @@ declare class SceneManager {
 /**
  * Static class that plays sound effects defined in the database.
  */
-declare class SoundManager {
+export class SoundManager {
 	protected constructor();
 	static preloadImportantSounds(): void;
 	static loadSystemSound(databaseNumber: number): void;
@@ -8228,7 +8228,7 @@ declare class SoundManager {
 /**
  * The static class that manages storage of save game data.
  */
-declare class StorageManager {
+export class StorageManager {
 	protected constructor();
 	static save(savefileId: number, json: string): void;
 	static load(savefileId: number): string;
@@ -8261,7 +8261,7 @@ declare class StorageManager {
  * This is linked to the terms and information
  * contained within the editor.
  */
-declare class TextManager {
+export class TextManager {
 	protected constructor();
 	static currencyUnit: string;
 	static level: string;
@@ -8356,7 +8356,7 @@ declare class TextManager {
 	static getter(method: string, param: number): string;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for enemy [Actions].
 	 */
@@ -8392,7 +8392,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for damage.
 	 */
@@ -8428,7 +8428,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for use effects.
 	 */
@@ -8452,7 +8452,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type UsableItem = {
 		/**
 		 * The animation ID.
@@ -8542,7 +8542,7 @@ declare namespace rm.types {
  * The game object class representing a battle action.
  * @class Game_Action
  */
-declare class Game_Action {
+export class Game_Action {
 	constructor(subject: Game_Battler, forcing: boolean);
 	_subjectActorId: number;
 	_subjectEnemyIndex: number;
@@ -8662,15 +8662,15 @@ declare class Game_Action {
 	static HITTYPE_MAGICAL: number;
 }
 
-declare namespace haxe.display {
+export namespace haxe.display {
 
 }
 
-declare namespace haxe.display {
+export namespace haxe.display {
 
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type Trait = {
 		/**
 		 * The trait code.
@@ -8699,7 +8699,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for state.
 	 */
@@ -8817,7 +8817,7 @@ declare namespace rm.types {
  * member variables in this declare class are public.
  * @class Game_ActionResult
  */
-declare class Game_ActionResult {
+export class Game_ActionResult {
 	constructor();
 	used: boolean;
 	missed: boolean;
@@ -8883,7 +8883,7 @@ declare class Game_ActionResult {
 	pushRemovedBuff(paramId: number): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for skills.
 	 */
@@ -8999,7 +8999,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for items.
 	 */
@@ -9102,7 +9102,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * A superclass of weapons and armor.
 	 */
@@ -9166,7 +9166,7 @@ declare namespace rm.types {
  * The superdeclare class of Game_Battler. It mainly contains parameters calculation.
  * @class Game_BattlerBase
  */
-declare class Game_BattlerBase {
+export class Game_BattlerBase {
 	constructor();
 	initialize(): void;
 	_hp: number;
@@ -10015,7 +10015,7 @@ declare class Game_BattlerBase {
 	static ICON_DEBUFF_START: number;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type BattlerAnimation = {
 		animationId: number;
 		delay: number;
@@ -10023,7 +10023,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum MotionType {
 		WALK = "walk",
 		WAIT = "wait",
@@ -10045,25 +10045,25 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum WeaponImageId {
 		base = -1,
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum AnimationId {
 		base = -1,
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum ActionState {
 		base = "",
 	}
 }
 
-declare class Game_Battler extends Game_BattlerBase {
+export class Game_Battler extends Game_BattlerBase {
 	protected constructor();
 	_actions: Game_Action[];
 	_speed: number;
@@ -10599,7 +10599,7 @@ declare class Game_Battler extends Game_BattlerBase {
 	performCollapse(): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for actors.
 	 */
@@ -10669,7 +10669,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for weapons.
 	 */
@@ -10734,7 +10734,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for armor.
 	 */
@@ -10795,7 +10795,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for a class's [Skills to Learn].
 	 */
@@ -10818,7 +10818,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for class.
 	 */
@@ -10872,7 +10872,7 @@ declare namespace rm.types {
 	}
 }
 
-declare class Game_Actor extends Game_Battler {
+export class Game_Actor extends Game_Battler {
 	constructor(actorId: number);
 	_actorId: number;
 	_name: string;
@@ -11562,7 +11562,7 @@ declare class Game_Actor extends Game_Battler {
 	testEscape(item: rm.types.BaseItem): boolean;
 }
 
-declare class Game_Actors {
+export class Game_Actors {
 	constructor();
 	/**
 	 * List of all Game_Actor in the database.
@@ -11579,7 +11579,7 @@ declare class Game_Actors {
 	actor(actorId: number): Game_Actor;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum MoveSpeed {
 		X8SLOWER = 1,
 		X4SLOWER = 2,
@@ -11590,7 +11590,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum MoveFrequency {
 		LOWEST = 1,
 		LOWER = 2,
@@ -11600,17 +11600,17 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum Direction {
 		base = -1,
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum CharacterPriority {
 		BELOW_CHARACTERS = 0,
 		SAME_AS_CHARACTERS = 1,
@@ -11618,7 +11618,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum BalloonId {
 		EXCLAMATION = 0,
 		QUESTION = 1,
@@ -11638,7 +11638,7 @@ declare namespace rm.types {
  * information such as coordinates, images, and more
  * shared by all characters.
  */
-declare class Game_CharacterBase {
+export class Game_CharacterBase {
 	constructor();
 	_x: number;
 	_y: number;
@@ -12004,7 +12004,7 @@ declare class Game_CharacterBase {
 	endBalloon(): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for the Move command.
 	 */
@@ -12020,7 +12020,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for the Move route.
 	 */
@@ -12048,7 +12048,7 @@ declare namespace rm.types {
  * Super class of Game_Player, Game_Follower, Game_Vehicle,
  * and Game_Event.
  */
-declare class Game_Character extends Game_CharacterBase {
+export class Game_Character extends Game_CharacterBase {
 	protected constructor();
 	_moveRouteForcing: boolean;
 	_moveRoute: rm.types.MoveRoute;
@@ -12265,7 +12265,7 @@ declare class Game_Character extends Game_CharacterBase {
 	static ROUTE_SCRIPT: number;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for the Event command.
 	 */
@@ -12285,7 +12285,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for common events.
 	 */
@@ -12313,7 +12313,7 @@ declare namespace rm.types {
 	}
 }
 
-declare class Game_CommonEvent {
+export class Game_CommonEvent {
 	constructor(commonEventId: number);
 	_commonEventId: number;
 	_interpreter: Game_Interpreter;
@@ -12353,7 +12353,7 @@ declare class Game_CommonEvent {
 	update(): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type EnemyDropItem = {
 		/**
 		 * The ID of the data depending on the type of dropped item (item, weapon, or armor).
@@ -12375,7 +12375,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type Enemy = {
 		/**
 		 * The enemy's action pattern. An array of RPG.Enemy.Action.
@@ -12444,7 +12444,7 @@ declare namespace rm.types {
  * The game object declare class for an enemy.
  * @class Game_Enemy
  */
-declare class Game_Enemy extends Game_Battler {
+export class Game_Enemy extends Game_Battler {
 	constructor(enemyId: number, x: number, y: number);
 	_enemyId: number;
 	_letter: string;
@@ -12574,7 +12574,7 @@ declare class Game_Enemy extends Game_Battler {
 	selectAllActions(actionList: rm.types.EnemyAction[]): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum MoveType {
 		FIXED = 0,
 		RANDOM = 1,
@@ -12583,13 +12583,13 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum EventTrigger {
 		base = -1,
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for the event page conditions.
 	 */
@@ -12649,7 +12649,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for the Event page [Graphics].
 	 */
@@ -12677,7 +12677,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for the event page.
 	 */
@@ -12737,7 +12737,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for map events.
 	 */
@@ -12771,7 +12771,7 @@ declare namespace rm.types {
  * THe game object class for an event. It contains functionality
  * for event page switching and running parallel process events.
  */
-declare class Game_Event extends Game_Character {
+export class Game_Event extends Game_Character {
 	constructor(mapId: number, eventId: number);
 	_mapId: number;
 	_eventId: number;
@@ -12941,7 +12941,7 @@ declare class Game_Event extends Game_Character {
  * other than the front character, displayed in the party.
  * @class Game_Follower
  */
-declare class Game_Follower extends Game_Character {
+export class Game_Follower extends Game_Character {
 	constructor(memberIndex: number);
 	_memberIndex: number;
 	refresh(): void;
@@ -12981,7 +12981,7 @@ declare class Game_Follower extends Game_Character {
  * The wrapper declare class for a follower array.
  * @class Game_Followers
  */
-declare class Game_Followers {
+export class Game_Followers {
 	constructor();
 	_visible: boolean;
 	_gathering: boolean;
@@ -13089,7 +13089,7 @@ declare class Game_Followers {
  * The interpreter for running event commands.
  * @class Game_Interpreter
  */
-declare class Game_Interpreter {
+export class Game_Interpreter {
 	constructor(depth: number);
 	_depth: number;
 	_branch: Object;
@@ -13699,7 +13699,7 @@ declare class Game_Interpreter {
  * This is required, because the save data should not include the database object itself.
  * @class Game_Item
  */
-declare class Game_Item {
+export class Game_Item {
 	constructor(item: rm.types.BaseItem);
 	_dataClass: string;
 	_itemId: number;
@@ -13771,7 +13771,7 @@ declare class Game_Item {
 	setEquip(isWeapon: boolean, itemId: number): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for tile sets.
 	 */
@@ -13835,7 +13835,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type MapEncounter = {
 		/**
 		 * An array containing Region IDs.
@@ -13857,7 +13857,7 @@ declare namespace rm.types {
  * The game object for the map. It contains scrolling and passage functions
  * along with the game interpreter.
  */
-declare class Game_Map {
+export class Game_Map {
 	constructor();
 	_interpreter: Game_Interpreter;
 	_mapId: number;
@@ -14309,43 +14309,43 @@ declare class Game_Map {
 	isAnyEventStarting(): boolean;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum MessageBackgroundType {
 		base = -1,
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum MessagePositionType {
 		base = -1,
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum ChoiceDefaultType {
 		base = -1,
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum ChoiceCancelType {
 		base = -1,
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum ChocieBackgroundType {
 		base = -1,
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum ChoicePositionType {
 		base = -1,
 	}
 }
 
-declare class Game_Message {
+export class Game_Message {
 	constructor();
 	_texts: string[];
 	_choices: string[];
@@ -14589,7 +14589,7 @@ declare class Game_Message {
  *
  * @class Game_Unit
  */
-declare class Game_Unit {
+export class Game_Unit {
 	constructor();
 	_inBattle: boolean;
 	initialize(): void;
@@ -14703,7 +14703,7 @@ declare class Game_Unit {
  * The game object for the party. Contains information
  * such as gold and items.
  */
-declare class Game_Party extends Game_Unit {
+export class Game_Party extends Game_Unit {
 	protected constructor();
 	_gold: number;
 	_steps: number;
@@ -15089,7 +15089,7 @@ declare class Game_Party extends Game_Unit {
  * The game object class for a picture.
  *
  */
-declare class Game_Picture {
+export class Game_Picture {
 	constructor();
 	/**
 	 * _name property of the current picture.
@@ -15241,7 +15241,7 @@ declare class Game_Picture {
  * the player is dashing. The Game Player State is this
  * object.
  */
-declare class Game_Player extends Game_Character {
+export class Game_Player extends Game_Character {
 	protected constructor();
 	_vehicleType: string;
 	_vehicleGettingOn: boolean;
@@ -15597,7 +15597,7 @@ declare class Game_Player extends Game_Character {
  * aliased as $gameScreen.
  * @class Game_Screen
  */
-declare class Game_Screen {
+export class Game_Screen {
 	constructor();
 	initialize(): void;
 	clear(): void;
@@ -15802,7 +15802,7 @@ declare class Game_Screen {
 /**
  *  The game object class for self switches.
  */
-declare class Game_SelfSwitches {
+export class Game_SelfSwitches {
 	constructor();
 	/**
 	 * {key: Array<Any>}
@@ -15839,7 +15839,7 @@ declare class Game_SelfSwitches {
  *
  * @class Game_Switches
  */
-declare class Game_Switches {
+export class Game_Switches {
 	constructor();
 	_data: boolean[];
 	initialize(): void;
@@ -15849,7 +15849,7 @@ declare class Game_Switches {
 	onChange(): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for audio file.
 	 */
@@ -15878,7 +15878,7 @@ declare namespace rm.types {
  * The game object class representing system data.
  * @class Game_System
  */
-declare class Game_System {
+export class Game_System {
 	protected constructor();
 	initialize(): void;
 	isJapanese(): boolean;
@@ -16117,7 +16117,7 @@ declare class Game_System {
  * included in the save data.
  * @class Game_Temp
  */
-declare class Game_Temp {
+export class Game_Temp {
 	constructor();
 	_isPlaytest: boolean;
 	_commonEventId: number;
@@ -16200,7 +16200,7 @@ declare class Game_Temp {
  *
  * @class Game_Timer
  */
-declare class Game_Timer {
+export class Game_Timer {
 	constructor();
 	_frames: number;
 	_working: boolean;
@@ -16247,7 +16247,7 @@ declare class Game_Timer {
 	onExpire(): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type TroopMember = {
 		/**
 		 * The enemy ID.
@@ -16268,7 +16268,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class of battle event [Conditions].
 	 */
@@ -16324,7 +16324,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for battle events (pages).
 	 */
@@ -16344,7 +16344,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type Troop = {
 		/**
 		 * The troop ID.
@@ -16372,7 +16372,7 @@ declare namespace rm.types {
  * The game object declare class for a troop and the battle-related data.
  * @class Game_Troop
  */
-declare class Game_Temp extends Game_Unit {
+export class Game_Temp extends Game_Unit {
 	constructor();
 	_interpreter: Game_Interpreter;
 	_troopId: number;
@@ -16496,7 +16496,7 @@ declare class Game_Temp extends Game_Unit {
 /**
  * The game object class for game variables.
  */
-declare class Game_Variables {
+export class Game_Variables {
 	constructor();
 	_data: number[];
 	initialize(): void;
@@ -16506,7 +16506,7 @@ declare class Game_Variables {
 	onChange(): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for vehicles.
 	 */
@@ -16541,7 +16541,7 @@ declare namespace rm.types {
 /**
  * The game object class for a vehicle.
  */
-declare class Game_Vehicle extends Game_Character {
+export class Game_Vehicle extends Game_Character {
 	constructor(type: string);
 	_type: string;
 	_mapId: number;
@@ -16718,7 +16718,7 @@ declare class Game_Vehicle extends Game_Character {
 	isLandOk(x: number, y: number, d: rm.types.Direction): boolean;
 }
 
-declare class Scene_Base extends Stage {
+export class Scene_Base extends Stage {
 	constructor();
 	_windowLayer: WindowLayer;
 	/**
@@ -16814,7 +16814,7 @@ declare class Scene_Base extends Stage {
 /**
  * Scene class of the battle screen.
  */
-declare class Scene_Battle extends Scene_Base {
+export class Scene_Battle extends Scene_Base {
 	protected constructor();
 	updateBattleProcess(): void;
 	isAnyInputWindowActive(): boolean;
@@ -16996,7 +16996,7 @@ declare class Scene_Battle extends Scene_Base {
 	endCommandSelection(): void;
 }
 
-declare class Scene_Boot extends Scene_Base {
+export class Scene_Boot extends Scene_Base {
 	protected constructor();
 	_databaseLoaded: boolean;
 	/**
@@ -17022,7 +17022,7 @@ declare class Scene_Boot extends Scene_Base {
 /**
  * The super class of all menu-type scenes
  */
-declare class Scene_MenuBase extends Scene_Base {
+export class Scene_MenuBase extends Scene_Base {
 	protected constructor();
 	/**
 	 * Returns the current game actor.
@@ -17074,7 +17074,7 @@ declare class Scene_MenuBase extends Scene_Base {
 /**
  * Scene class of the debug menu screen.
  */
-declare class Scene_Debug extends Scene_MenuBase {
+export class Scene_Debug extends Scene_MenuBase {
 	protected constructor();
 	/**
 	 * Creates the range window.
@@ -17109,7 +17109,7 @@ declare class Scene_Debug extends Scene_MenuBase {
 /**
  * Scene class of the equipment screen.
  */
-declare class Scene_Equip extends Scene_MenuBase {
+export class Scene_Equip extends Scene_MenuBase {
 	protected constructor();
 	/**
 	 * Creates the status window within the equip scene.
@@ -17164,7 +17164,7 @@ declare class Scene_Equip extends Scene_MenuBase {
 /**
  *  Super class of Scene_Save and Scene_Load
  */
-declare class Scene_File extends Scene_MenuBase {
+export class Scene_File extends Scene_MenuBase {
 	protected constructor();
 	/**
 	 * Returns the index of the first
@@ -17200,7 +17200,7 @@ declare class Scene_File extends Scene_MenuBase {
 /**
  * Scene class of the game end screen.
  */
-declare class Scene_GameEnd extends Scene_MenuBase {
+export class Scene_GameEnd extends Scene_MenuBase {
 	protected constructor();
 	stop(): void;
 	/**
@@ -17226,7 +17226,7 @@ declare class Scene_GameEnd extends Scene_MenuBase {
 /**
  * Scene class of the game over screen.
  */
-declare class Scene_Gameover extends Scene_Base {
+export class Scene_Gameover extends Scene_Base {
 	protected constructor();
 	stop(): void;
 	/**
@@ -17253,7 +17253,7 @@ declare class Scene_Gameover extends Scene_Base {
  * Super class of all public function item(skill, items, etc) screen scenes.
  * Super class of Scene_Item & Scene_Skill.
  */
-declare class Scene_ItemBase extends Scene_Base {
+export class Scene_ItemBase extends Scene_Base {
 	protected constructor();
 	/**
 	 * Creates the actor window within the base item scene.
@@ -17343,7 +17343,7 @@ declare class Scene_ItemBase extends Scene_Base {
  * @class Scene_Item
  * @extends {Scene_ItemBase}
  */
-declare class Scene_Item extends Scene_ItemBase {
+export class Scene_Item extends Scene_ItemBase {
 	protected constructor();
 	/**
 	 * Creates the category window on the
@@ -17386,7 +17386,7 @@ declare class Scene_Item extends Scene_ItemBase {
 /**
  * The scene class of the load game screen.
  */
-declare class Scene_Load extends Scene_File {
+export class Scene_Load extends Scene_File {
 	protected constructor();
 	/**
 	 * Returns the mode of the
@@ -17412,7 +17412,7 @@ declare class Scene_Load extends Scene_File {
 /**
  * The scene class for the map screen.
  */
-declare class Scene_Map extends Scene_Base {
+export class Scene_Map extends Scene_Base {
 	protected constructor();
 	menuCalling: boolean;
 	/**
@@ -17625,7 +17625,7 @@ declare class Scene_Map extends Scene_Base {
 /**
  * The menu scene in your RPGMakerMV game.
  */
-declare class Scene_Menu extends Scene_MenuBase {
+export class Scene_Menu extends Scene_MenuBase {
 	protected constructor();
 	/**
 	 * Creates the main menu window on the
@@ -17681,7 +17681,7 @@ declare class Scene_Menu extends Scene_MenuBase {
 /**
  * Scene class of the name input screen.
  */
-declare class Scene_Name extends Scene_MenuBase {
+export class Scene_Name extends Scene_MenuBase {
 	protected constructor();
 	/**
 	 * Prepares the name input scene for giving the specified
@@ -17715,7 +17715,7 @@ declare class Scene_Name extends Scene_MenuBase {
 /**
  * Scene class of the options screen.
  */
-declare class Scene_Options extends Scene_MenuBase {
+export class Scene_Options extends Scene_MenuBase {
 	protected constructor();
 	createOptionsWindow(): void;
 }
@@ -17723,7 +17723,7 @@ declare class Scene_Options extends Scene_MenuBase {
 /**
  * Save game screen scene for RPGMakerMV.
  */
-declare class Scene_Save extends Scene_File {
+export class Scene_Save extends Scene_File {
 	protected constructor();
 	/**
 	 * Returns the mode of the
@@ -17760,7 +17760,7 @@ declare class Scene_Save extends Scene_File {
 	onSaveFailure(): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum Money {
 		base = -1,
 	}
@@ -17769,7 +17769,7 @@ declare namespace rm.types {
 /**
  * Scene class of the shop screen.
  */
-declare class Scene_Shop extends Scene_MenuBase {
+export class Scene_Shop extends Scene_MenuBase {
 	protected constructor();
 	prepare(goods: any[][], purchaseOnly: boolean): void;
 	/**
@@ -17915,7 +17915,7 @@ declare class Scene_Shop extends Scene_MenuBase {
 /**
  * The scene class of the skill screen.
  */
-declare class Scene_Skill extends Scene_ItemBase {
+export class Scene_Skill extends Scene_ItemBase {
 	protected constructor();
 	/**
 	 * Creates the window for skill types
@@ -17968,7 +17968,7 @@ declare class Scene_Skill extends Scene_ItemBase {
 /**
  * Scene class of the status screen in RPGMakerMV.
  */
-declare class Scene_Status extends Scene_MenuBase {
+export class Scene_Status extends Scene_MenuBase {
 	protected constructor();
 	/**
 	 * Refreshes the actor within the status scene.
@@ -17984,7 +17984,7 @@ declare class Scene_Status extends Scene_MenuBase {
 	onActorChange(): void;
 }
 
-declare class Scene_Title extends Scene_Base {
+export class Scene_Title extends Scene_Base {
 	protected constructor();
 	/**
 	 * The command window for title scene commands like new game, continue, or options.
@@ -18042,7 +18042,7 @@ declare class Scene_Title extends Scene_Base {
 	playTitleMusic(): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for the timing of an animation's SE and flash effects.
 	 */
@@ -18070,7 +18070,7 @@ declare namespace rm.types {
 	}
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	/**
 	 * The data class for animation.
 	 */
@@ -18118,7 +18118,7 @@ declare namespace rm.types {
 	}
 }
 
-declare class Sprite_Base extends Sprite {
+export class Sprite_Base extends Sprite {
 	constructor();
 	/**
 	 * The animation sprites assigned to the
@@ -18185,7 +18185,7 @@ declare class Sprite_Base extends Sprite {
 	isAnimationPlaying(): boolean;
 }
 
-declare class Sprite_Battler extends Sprite_Base {
+export class Sprite_Battler extends Sprite_Base {
 	protected constructor();
 	_battler: Game_Battler;
 	_homeX: number;
@@ -18220,7 +18220,7 @@ declare class Sprite_Battler extends Sprite_Base {
 	updateAnimation(): void;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export type Motion = {
 		index: number;
 		loop: boolean;
@@ -18233,7 +18233,7 @@ declare namespace rm.types {
  *
  * The sprite for displaying an actor.
  */
-declare class Sprite_Actor extends Sprite_Battler {
+export class Sprite_Actor extends Sprite_Battler {
 	/**
 	 * Creates an instance of Sprite_Actor; can be passed
 	 * a battler on creation.
@@ -18371,7 +18371,7 @@ declare class Sprite_Actor extends Sprite_Battler {
  *
  * The sprite for displaying an animation.
  */
-declare class Sprite_Animation extends Sprite {
+export class Sprite_Animation extends Sprite {
 	protected constructor();
 	/**
 	 * {
@@ -18522,7 +18522,7 @@ declare class Sprite_Animation extends Sprite {
  *
  * The sprite for displaying a balloon icon.
  */
-declare class Sprite_Balloon extends Sprite_Base {
+export class Sprite_Balloon extends Sprite_Base {
 	protected constructor();
 	_balloonId: rm.types.BalloonId;
 	_duration: number;
@@ -18577,7 +18577,7 @@ declare class Sprite_Balloon extends Sprite_Base {
  *
  * The sprite for displaying a button.
  */
-declare class Sprite_Button extends Sprite {
+export class Sprite_Button extends Sprite {
 	protected constructor();
 	_touching: boolean;
 	_coldFrame: Rectangle;
@@ -18669,7 +18669,7 @@ declare class Sprite_Button extends Sprite {
  *
  * The sprite for displaying a character.
  */
-declare class Sprite_Character extends Sprite_Base {
+export class Sprite_Character extends Sprite_Base {
 	/**
 	 * Creates an instance of Sprite_Character.
 	 * @param {Game_Character} character
@@ -18832,7 +18832,7 @@ declare class Sprite_Character extends Sprite_Base {
  *
  * The sprite for displaying a popup damage.
  */
-declare class Sprite_Damage extends Sprite {
+export class Sprite_Damage extends Sprite {
 	protected constructor();
 	__duration: number;
 	/**
@@ -18899,7 +18899,7 @@ declare class Sprite_Damage extends Sprite {
  *
  * The sprite for displaying the destination place of the touch input.
  */
-declare class Sprite_Destination extends Sprite {
+export class Sprite_Destination extends Sprite {
 	protected constructor();
 	_frameCount: number;
 	/**
@@ -18928,7 +18928,7 @@ declare class Sprite_Destination extends Sprite {
  *
  * The sprite for displaying an enemy.
  */
-declare class Sprite_Enemy extends Sprite_Battler {
+export class Sprite_Enemy extends Sprite_Battler {
 	constructor(battler: Game_Enemy);
 	_enemy: Game_Enemy;
 	_appeared: boolean;
@@ -19060,7 +19060,7 @@ declare class Sprite_Enemy extends Sprite_Battler {
  *
  * The sprite for displaying a picture.
  */
-declare class Sprite_Picture {
+export class Sprite_Picture {
 	constructor(pictureId: number);
 	_pictureId: number;
 	_pictureName: string;
@@ -19081,7 +19081,7 @@ declare class Sprite_Picture {
  *
  * The sprite for displaying state icons.
  */
-declare class Sprite_StateIcon extends Sprite {
+export class Sprite_StateIcon extends Sprite {
 	protected constructor();
 	_battler: Game_Battler;
 	_iconIndex: number;
@@ -19123,7 +19123,7 @@ declare class Sprite_StateIcon extends Sprite {
  *
  * The sprite for displaying an overlay image for a state.
  */
-declare class Sprite_StateOverlay extends Sprite_Base {
+export class Sprite_StateOverlay extends Sprite_Base {
 	protected constructor();
 	_battler: Game_Battler;
 	_overlayIndex: number;
@@ -19163,7 +19163,7 @@ declare class Sprite_StateOverlay extends Sprite_Base {
  *
  * The sprite for displaying the timer.
  */
-declare class Sprite_Timer extends Sprite {
+export class Sprite_Timer extends Sprite {
 	protected constructor();
 	_seconds: number;
 	/**
@@ -19211,7 +19211,7 @@ declare class Sprite_Timer extends Sprite {
  *
  * The sprite for displaying a weapon image for attacking.
  */
-declare class Sprite_Weapon extends Sprite_Base {
+export class Sprite_Weapon extends Sprite_Base {
 	protected constructor();
 	_weaponImageId: rm.types.WeaponImageId;
 	_animaationCount: number;
@@ -19257,7 +19257,7 @@ declare class Sprite_Weapon extends Sprite_Base {
  *
  * The superdeclare class of Spriteset_Map and Spriteset_Battle.
  */
-declare class Spriteset_Base extends Sprite {
+export class Spriteset_Base extends Sprite {
 	protected constructor();
 	_tone: number[];
 	_baseSprite: Sprite;
@@ -19355,7 +19355,7 @@ declare class Spriteset_Base extends Sprite {
  *
  * The set of sprites on the battle screen.
  */
-declare class Spriteset_Battle extends Spriteset_Base {
+export class Spriteset_Battle extends Spriteset_Base {
 	protected constructor();
 	_battlebackLocated: boolean;
 	_backgroundSprite: Sprite;
@@ -19551,7 +19551,7 @@ declare class Spriteset_Battle extends Spriteset_Base {
  *
  * The set of sprites on the map screen.
  */
-declare class Spriteset_Map extends Spriteset_Base {
+export class Spriteset_Map extends Spriteset_Base {
 	protected constructor();
 	_parallax: TilingSprite;
 	_tilemap: Tilemap | ShaderTilemap;
@@ -19636,7 +19636,7 @@ declare class Spriteset_Map extends Spriteset_Base {
 	updateWeather(): void;
 }
 
-declare class Window_Selectable extends Window_Base {
+export class Window_Selectable extends Window_Base {
 	constructor(x: number, y: number, width: number, height: number);
 	initialize(x: number, y: number, height: number, width: number): void;
 	/**
@@ -19885,7 +19885,7 @@ declare class Window_Selectable extends Window_Base {
 	refresh(): void;
 }
 
-declare class Window_Command extends Window_Selectable {
+export class Window_Command extends Window_Selectable {
 	/**
 	 * Creates an instance of Window_Command.
 	 * @param {number} x
@@ -20035,7 +20035,7 @@ declare class Window_Command extends Window_Selectable {
  * The window for selecting an actor's action on the battle screen.
  * @class Window_ActorCommand
  */
-declare class Window_ActorCommand extends Window_Command {
+export class Window_ActorCommand extends Window_Command {
 	constructor();
 	/**
 	 * Adds the attack command to the actor command window.
@@ -20078,7 +20078,7 @@ declare class Window_ActorCommand extends Window_Command {
  * The window for displaying the status of party members on the battle screen.
  * @class Window_BattleStatus
  */
-declare class Window_BattleStatus extends Window_Selectable {
+export class Window_BattleStatus extends Window_Selectable {
 	constructor();
 	/**
 	 * Returns the window width.
@@ -20158,7 +20158,7 @@ declare class Window_BattleStatus extends Window_Selectable {
  * The window for selecting a target actor on the battle screen.
  * @class Window_BattleActor
  */
-declare class Window_BattleActor extends Window_BattleStatus {
+export class Window_BattleActor extends Window_BattleStatus {
 	constructor(x: number, y: number);
 	initialize(x: number, y: number): void;
 	/**
@@ -20184,7 +20184,7 @@ declare class Window_BattleActor extends Window_BattleStatus {
  * The window for selecting a target enemy on the battle screen.
  * @class Window_BattleEnemy
  */
-declare class Window_BattleEnemy extends Window_Selectable {
+export class Window_BattleEnemy extends Window_Selectable {
 	constructor(x: number, y: number);
 	initialize(x: number, y: number): void;
 	/**
@@ -20231,7 +20231,7 @@ declare class Window_BattleEnemy extends Window_Selectable {
 	select(index: number): void;
 }
 
-declare class Window_ItemList extends Window_Selectable {
+export class Window_ItemList extends Window_Selectable {
 	constructor(x: number, y: number, width: number, height: number);
 	initialize(x: number, y: number, width: number, height: number): void;
 	needsNumber(): boolean;
@@ -20247,7 +20247,7 @@ declare class Window_ItemList extends Window_Selectable {
  * The window for selecting an item to use on the battle screen.
  * @class Window_BattleItem
  */
-declare class Window_BattleItem extends Window_ItemList {
+export class Window_BattleItem extends Window_ItemList {
 	constructor(x: number, y: number, width: number, height: number);
 	initialize(x: number, y: number, width: number, height: number): void;
 	includes(item: rm.types.UsableItem): boolean;
@@ -20261,7 +20261,7 @@ declare class Window_BattleItem extends Window_ItemList {
  * handled as a window for convenience.
  * @class Window_BattleLog
  */
-declare class Window_BattleLog extends Window_Base {
+export class Window_BattleLog extends Window_Base {
 	constructor();
 	initialize(): void;
 	setSpriteset(spriteset: Spriteset_Battle): void;
@@ -20349,7 +20349,7 @@ declare class Window_BattleLog extends Window_Base {
 	makeTpDamageText(target: Game_Battler): string;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum SkillTypeIdA {
 		base = -1,
 	}
@@ -20362,7 +20362,7 @@ declare namespace rm.types {
  * The window for selecting a skill on the skill screen.
  * @class Window_SkillList
  */
-declare class Window_SkillList extends Window_Selectable {
+export class Window_SkillList extends Window_Selectable {
 	constructor(x: number, y: number, witth: number, height: number);
 	_actor: Game_Actor;
 	/**
@@ -20427,7 +20427,7 @@ declare class Window_SkillList extends Window_Selectable {
  * The window for selecting a skill to use on the battle screen.
  * @class Window_BattleSkill
  */
-declare class Window_BattleSkill extends Window_SkillList {
+export class Window_BattleSkill extends Window_SkillList {
 	constructor(x: number, y: number, width: number, height: number);
 	initialize(x: number, y: number, width: number, height: number): void;
 }
@@ -20439,7 +20439,7 @@ declare class Window_BattleSkill extends Window_SkillList {
  * The window used for the event command [Show Choices].
  * @class Window_ChoiceList
  */
-declare class Window_ChoiceList extends Window_Command {
+export class Window_ChoiceList extends Window_Command {
 	constructor(messageWindow: Window_Message);
 	initialize(messageWindow: Window_Message): void;
 	start(): void;
@@ -20457,7 +20457,7 @@ declare class Window_ChoiceList extends Window_Command {
  * The window for displaying switches and variables on the debug screen.
  * @class Window_DebugEdit
  */
-declare class Window_DebugEdit extends Window_Selectable {
+export class Window_DebugEdit extends Window_Selectable {
 	constructor(x: number, y: number, width: number);
 	itemName(dataId: number): string;
 	itemStatus(dataId: string): string;
@@ -20475,7 +20475,7 @@ declare class Window_DebugEdit extends Window_Selectable {
  * The window for selecting a block of switches/variables on the debug screen.
  * @class Window_DebugRange
  */
-declare class Window_DebugRange extends Window_Selectable {
+export class Window_DebugRange extends Window_Selectable {
 	constructor(x: number, y: number);
 	windowWidth(): number;
 	windowHeight(): number;
@@ -20484,11 +20484,11 @@ declare class Window_DebugRange extends Window_Selectable {
 	setEditWindow(editWindow: Window_DebugEdit): void;
 }
 
-declare class Window_HorzCommand extends Window_Command {
+export class Window_HorzCommand extends Window_Command {
 	constructor(x: number, y: number);
 }
 
-declare class Window_EquipCommand extends Window_HorzCommand {
+export class Window_EquipCommand extends Window_HorzCommand {
 	protected constructor();
 }
 
@@ -20499,7 +20499,7 @@ declare class Window_EquipCommand extends Window_HorzCommand {
  * The window for selecting an equipment item on the equipment screen.
  * @class Window_EquipItem
  */
-declare class Window_EquipItem {
+export class Window_EquipItem {
 	constructor(x: number, y: number, width: number, height: number);
 	setActor(actor: Game_Actor): void;
 	setSlotId(slotId: number): void;
@@ -20515,7 +20515,7 @@ declare class Window_EquipItem {
  * The window for selecting an equipment slot on the equipment screen.
  * @class Window_EquipSlot
  */
-declare class Window_EquipSlot extends Window_Selectable {
+export class Window_EquipSlot extends Window_Selectable {
 	constructor(x: number, y: number, width: number, height: number);
 	initialize(x: number, y: number, width: number, height: number): void;
 	/**
@@ -20564,7 +20564,7 @@ declare class Window_EquipSlot extends Window_Selectable {
 	setItemWindow(itemWindow: Window_EquipItem): void;
 }
 
-declare class Window_EquipStatus extends Window_Base {
+export class Window_EquipStatus extends Window_Base {
 	protected constructor();
 }
 
@@ -20575,7 +20575,7 @@ declare class Window_EquipStatus extends Window_Base {
  * The window used for the event command [Select Item].
  * @class Window_EventItem
  */
-declare class Window_EventItem extends Window_ItemList {
+export class Window_EventItem extends Window_ItemList {
 	constructor(messageWindow: Window_Message);
 	/**
 	 * Returns the height off the window.
@@ -20611,12 +20611,12 @@ declare class Window_EventItem extends Window_ItemList {
  * The window for selecting "Go to Title" on the game end screen.
  * @class Window_GameEnd
  */
-declare class Window_GameEnd extends Window_Base {
+export class Window_GameEnd extends Window_Base {
 	constructor();
 	updatePlacement(): void;
 }
 
-declare class Window_Gold extends Window_Base {
+export class Window_Gold extends Window_Base {
 	constructor(x: number, y: number);
 	/**
 	 * Returns the $gameParty gold as a number.
@@ -20634,7 +20634,7 @@ declare class Window_Gold extends Window_Base {
 	currencyUnit(): string;
 }
 
-declare class Window_Help extends Window_Base {
+export class Window_Help extends Window_Base {
 	/**
 	 * Creates an instance of Window_Help.
 	 * @param {number} numLines
@@ -20658,7 +20658,7 @@ declare class Window_Help extends Window_Base {
 	setItem(item: rm.types.BaseItem): void;
 }
 
-declare class Window_ItemCategory extends Window_HorzCommand {
+export class Window_ItemCategory extends Window_HorzCommand {
 	protected constructor();
 }
 
@@ -20669,7 +20669,7 @@ declare class Window_ItemCategory extends Window_HorzCommand {
  * The window for displaying the map name on the map screen.
  * @class Window_MapName
  */
-declare class Window_MapName extends Window_Base {
+export class Window_MapName extends Window_Base {
 	constructor();
 	/**
 	 * Returns the window width.
@@ -20713,7 +20713,7 @@ declare class Window_MapName extends Window_Base {
  * @class Window_MenuStatus
  * @extends {Window_Selectable}
  */
-declare class Window_MenuStatus extends Window_Selectable {
+export class Window_MenuStatus extends Window_Selectable {
 	/**
 	 * Creates an instance of Window_MenuStatus.
 	 * @param {number} x
@@ -20780,13 +20780,13 @@ declare class Window_MenuStatus extends Window_Selectable {
 	setPendingIndex(index: number): void;
 }
 
-declare class Window_MenuActor extends Window_MenuStatus {
+export class Window_MenuActor extends Window_MenuStatus {
 	constructor();
 	initialize(): void;
 	selectForItem(item: rm.types.BaseItem): void;
 }
 
-declare class Window_MenuCommand extends Window_Command {
+export class Window_MenuCommand extends Window_Command {
 	constructor(x: number, y: number);
 	/**
 	 * Adds the standard game commands to the
@@ -20852,7 +20852,7 @@ declare class Window_MenuCommand extends Window_Command {
 	static _lastCommandSymbol: any;
 }
 
-declare class Window_Message extends Window_Base {
+export class Window_Message extends Window_Base {
 	protected constructor();
 	initialize(): void;
 	initMembers(): void;
@@ -21023,7 +21023,7 @@ declare class Window_Message extends Window_Base {
 	processNewPage(textState: rm.types.TextState): void;
 }
 
-declare class Window_NameBox extends Window_Base {
+export class Window_NameBox extends Window_Base {
 	constructor();
 	baseTextRect(): Rectangle;
 }
@@ -21035,7 +21035,7 @@ declare class Window_NameBox extends Window_Base {
  * The window for editing an actor's name on the name input screen.
  * @class Window_NameEdit
  */
-declare class Window_NameEdit {
+export class Window_NameEdit {
 	/**
 	 * Creates an instance of Window_NameEdit.
 	 * @param {Game_Actor} actor
@@ -21112,7 +21112,7 @@ declare class Window_NameEdit {
  * The window for selecting text characters on the name input screen.
  * @class Window_NameInputt
  */
-declare class Window_NameInput extends Window_Selectable {
+export class Window_NameInput extends Window_Selectable {
 	constructor(editWindow: Window_NameEdit);
 	/**
 	 * Returns the window height.
@@ -21143,7 +21143,7 @@ declare class Window_NameInput extends Window_Selectable {
 	static JAPAN3: string[];
 }
 
-declare class Window_NumberInput extends Window_Selectable {
+export class Window_NumberInput extends Window_Selectable {
 	constructor(messageWindow: Window_Message);
 	start(): void;
 	updatePlacement(): void;
@@ -21191,7 +21191,7 @@ declare class Window_NumberInput extends Window_Selectable {
 	onButtonOk(): void;
 }
 
-declare class Window_Options extends Window_Command {
+export class Window_Options extends Window_Command {
 	constructor();
 	updatePlacement(): void;
 	addGeneralOptions(): void;
@@ -21214,18 +21214,18 @@ declare class Window_Options extends Window_Command {
  * The window for selecting whether to fight or escape on the battle screen.
  * @class Window_PartyCommand
  */
-declare class Window_PartyCommand extends Window_Command {
+export class Window_PartyCommand extends Window_Command {
 	constructor();
 	setup(): void;
 }
 
-declare namespace rm.windows {
+export namespace rm.windows {
 	export type Info = {
 		key: string;
 	}
 }
 
-declare class Window_SavefileList extends Window_Selectable {
+export class Window_SavefileList extends Window_Selectable {
 	constructor(x: number, y: number, width: number, height: number);
 	/**
 	 * Sets the mode of the save file window.
@@ -21274,7 +21274,7 @@ declare class Window_SavefileList extends Window_Selectable {
  * is handled as a window for convenience.
  * @class Window_ScrollText
  */
-declare class Window_ScrollText extends Window_Base {
+export class Window_ScrollText extends Window_Base {
 	constructor();
 	/**
 	 * Starts the displaying of a message in the scroll text window.
@@ -21314,7 +21314,7 @@ declare class Window_ScrollText extends Window_Base {
  * The window for selecting an item to buy on the shop screen.
  * @class Window_ShopBuy
  */
-declare class Window_ShopBuy extends Window_Selectable {
+export class Window_ShopBuy extends Window_Selectable {
 	/**
 	 * Creates an instance of Window_ShopBuy.
 	 * @param {number} x
@@ -21373,7 +21373,7 @@ declare class Window_ShopBuy extends Window_Selectable {
  * The window for selecting buy/sell on the shop screen.
  * @class Window_ShopCommand
  */
-declare class Window_ShopCommand extends Window_HorzCommand {
+export class Window_ShopCommand extends Window_HorzCommand {
 	protected constructor();
 	_purchaseOnly: boolean;
 	/**
@@ -21394,7 +21394,7 @@ declare class Window_ShopCommand extends Window_HorzCommand {
  * screen.
  * @class Window_ShopNumber
  */
-declare class Window_ShopNumber extends Window_Selectable {
+export class Window_ShopNumber extends Window_Selectable {
 	/**
 	 * Creates an instance of Window_ShopNumber.
 	 * @param {number} x
@@ -21513,7 +21513,7 @@ declare class Window_ShopNumber extends Window_Selectable {
  * The window for selecting an item to sell on the shop screen.
  * @class Window_ShopSell
  */
-declare class Window_ShopSell extends Window_ItemList {
+export class Window_ShopSell extends Window_ItemList {
 	constructor(x: number, y: number, width: number, height: number);
 	/**
 	 * Determines if the item is sellable, otherwise, greyed out.
@@ -21525,7 +21525,7 @@ declare class Window_ShopSell extends Window_ItemList {
 	isEnabled(item: rm.types.BaseItem): boolean;
 }
 
-declare namespace rm.types {
+export namespace rm.types {
 	export const enum EquipTypeId {
 		base = -1,
 	}
@@ -21539,7 +21539,7 @@ declare namespace rm.types {
  * equipment on the shop screen.
  * @class Window_ShopStatus
  */
-declare class Window_ShopStatus extends Window_Base {
+export class Window_ShopStatus extends Window_Base {
 	/**
 	 * Creates an instance of Window_ShopStatus.
 	 * @param {number} x
@@ -21638,7 +21638,7 @@ declare class Window_ShopStatus extends Window_Base {
  * The window for displaying the skill user's status on the skill screen.
  * @class Window_SkillStatus
  */
-declare class Window_SkillStatus extends Window_Base {
+export class Window_SkillStatus extends Window_Base {
 	/**
 	 * Creates an instance of Window_SkillStatus.
 	 * @param x
@@ -21670,7 +21670,7 @@ declare class Window_SkillStatus extends Window_Base {
  * The window for selecting a skill type on the skill screen.
  * @class Window_SkillType
  */
-declare class Window_SkillType extends Window_Command {
+export class Window_SkillType extends Window_Command {
 	/**
 	 * Creates an instance of Window_SkillType.
 	 * @param  x
@@ -21700,7 +21700,7 @@ declare class Window_SkillType extends Window_Command {
 	selectLast(): void;
 }
 
-declare class Window_Status extends Window_Selectable {
+export class Window_Status extends Window_Selectable {
 	constructor(x: number, y: number, width: number, height: number);
 	initialize(x: number, y: number, width: number, height: number): void;
 	/**
@@ -21758,7 +21758,7 @@ declare class Window_Status extends Window_Selectable {
  * The window for selecting New Game/Continue on the title screen.
  * @class Window_TitleCommand
  */
-declare class Window_TitleCommand extends Window_Command {
+export class Window_TitleCommand extends Window_Command {
 	protected constructor();
 	updatePlacement(): void;
 	isContinueEnabled(): boolean;
@@ -21903,7 +21903,7 @@ interface TestBattler {
 /**
  * The data class for maps.
  */
- interface Map extends MetaData {
+ interface MapMetaData extends MetaData {
     /**
      * The map's display name.
      */
@@ -22275,7 +22275,7 @@ declare var $dataSystem: System;
 /** @global RPGMakerMV MapInfo data. */
 declare var $dataMapInfos: Array<MapInfo>;
 /** @global RPGMakerMV Map data for the current map. */
-declare var $dataMap: Map;
+declare var $dataMap: MapMetaData;
 /** @global RPGMakerMV Temporary game data; not saved with the game. */
 declare var $gameTemp: Game_Temp;
 /** @global RPGMakerMV Game System data; saved with the game.
