@@ -1,17 +1,18 @@
 const fs = require("fs")
+const path = require("path")
 
-
-let combineFiles = (file1, file2, file3, outputFile) => {
-  const fileContent = fs.readFileSync(file1, "utf8")
-  const fileContent2 = fs.readFileSync(file2, "utf8")
-  const fileContent3 = fs.readFileSync(file3, "utf8")
-
-  fs.writeFileSync(outputFile, fileContent + fileContent2 + fileContent3, "utf8")
+/**
+ * 
+ * @param {string} outputPath 
+ * @param  {...string} files 
+ */
+function combineFiles(outputPath, ...files) {
+  let finalFile = '';
+  for (const file of files) {
+    finalFile += fs.readFileSync(path.resolve(file), 'utf-8');
+  }
+  fs.writeFileSync(outputPath, finalFile);
 }
 
-
-combineFiles("definitions/pixi-4.5.4.d.ts", "definitions/lunalite-mv.d.ts","definitions/lunalite-globals.d.ts" , "definitions/lunalite-pixi-mv.d.ts")
-combineFiles("definitions/pixi-5.2.4.js.d.ts", "definitions/lunalite-mz.d.ts", "definitions/lunalite-globals.d.ts", "definitions/lunalite-pixi-mz.d.ts")
-
-
-
+combineFiles("./dist/rmmv-types.d.ts", "./definitions/pixi-4.5.4.d.ts", "./definitions/rpgm-mv.d.ts", "./definitions/rpgm-common.d.ts");
+combineFiles("./dist/rmmz-types.d.ts", "./definitions/pixi-5.2.4.d.ts", "./definitions/rpgm-mz.d.ts", "./definitions/rpgm-common.d.ts");
