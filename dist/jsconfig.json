@@ -5,8 +5,8 @@
   },
 
   "include": [
-    "lunalite-pixi-mv.d.ts",
-    "lunalite-pixi-mz.d.ts",
+    "rmmv-types.d.ts",
+    "rmmz-types.d.ts",
     "./*",
     "./plugins_dev/*.js",
     "plugins_dev/*.js"
