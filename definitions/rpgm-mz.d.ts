@@ -3965,7 +3965,7 @@ export class DataManager {
 	static _globalId: string;
 	static _lastAccessId: number;
 	static _errorUrl: any;
-	static _databaseFiles: JSON[];
+	static _databaseFiles: any[];
 	static loadDatabase(): void;
 	static loadDataFile(name: string, src: string): void;
 	static isDatabaseLoaded(): boolean;
