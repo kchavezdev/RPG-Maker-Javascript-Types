@@ -2513,7 +2513,7 @@ declare namespace PIXI {
     namespace prepare {
         type AddHook = (item: any, queue: any[]) => boolean;
         type UploadHook<UploadHookSource> = (prepare: UploadHookSource, item: any) => boolean;
-        abstract class BasePrepare<UploadHookSource>{
+        abstract class BasePrepare<UploadHookSource> {
             constructor(renderer: SystemRenderer);
 
             limiter: CountLimiter | TimeLimiter;
@@ -2808,7 +2808,7 @@ declare namespace PIXI {
         class EventEmitter {
             static prefixed: string | boolean;
             static EventEmitter: {
-                new (): EventEmitter;
+                new(): EventEmitter;
                 prefixed: string | boolean;
             };
             /**

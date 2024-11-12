@@ -5566,7 +5566,7 @@ declare namespace PIXI {
      * @memberof PIXI
      */
     class CubeTexture extends PIXI.BaseTexture {
-        static from(resources: string|HTMLImageElement|HTMLCanvasElement|SVGElement|HTMLVideoElement, options?: any): BaseTexture;
+        static from(resources: string | HTMLImageElement | HTMLCanvasElement | SVGElement | HTMLVideoElement, options?: any): BaseTexture;
         /**
          * Generate a new CubeTexture.
          * @static
@@ -23986,7 +23986,7 @@ declare interface OffscreenCanvas {
 
 declare namespace PIXI {
     namespace utils {
-// https://github.com/primus/eventemitter3
+        // https://github.com/primus/eventemitter3
         export interface EventEmitter {
             /**
              * Return an array listing the events for which the emitter has registered listeners.
