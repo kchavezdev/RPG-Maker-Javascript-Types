@@ -4305,7 +4305,7 @@ export class ImageManager {
 	 * @returns {Bitmap}
 	 * @memberof ImageManagerStatic
 	 */
-	static loadBitmap(folder: string, filename: string, hue: number, smooth: boolean): Bitmap;
+	static loadBitmap(folder: string, filename: string): Bitmap;
 	/**
 	 * Loads an empty Bitmap object and returns it.
 	 *
@@ -11199,7 +11199,7 @@ export class Game_Party extends Game_Unit {
 	 * @memberof Game_Party
 	 */
 	allItems(): rm.types.BaseItem[];
-	itemContainer(item: rm.types.BaseItem): {ItemId: number};
+	itemContainer(item: rm.types.BaseItem): { ItemId: number };
 	/**
 	 * Sets up the starting party members.
 	 *
@@ -14879,7 +14879,7 @@ export class Sprite_Actor extends Sprite_Battler {
 	retreat(): void;
 	damageOffsetX(): number;
 	damageOffsetY(): number;
-	static MOTIONS: {abnormal: rm.types.Motion, chant: rm.types.Motion, damage: rm.types.Motion, dead: rm.types.Motion, dying: rm.types.Motion, escape: rm.types.Motion, evade: rm.types.Motion, guard: rm.types.Motion, item: rm.types.Motion, missile: rm.types.Motion, skill: rm.types.Motion, sleep: rm.types.Motion, spell: rm.types.Motion, swing: rm.types.Motion, thrust: rm.types.Motion, victory: rm.types.Motion, wait: rm.types.Motion, walk: rm.types.Motion};
+	static MOTIONS: { abnormal: rm.types.Motion, chant: rm.types.Motion, damage: rm.types.Motion, dead: rm.types.Motion, dying: rm.types.Motion, escape: rm.types.Motion, evade: rm.types.Motion, guard: rm.types.Motion, item: rm.types.Motion, missile: rm.types.Motion, skill: rm.types.Motion, sleep: rm.types.Motion, spell: rm.types.Motion, swing: rm.types.Motion, thrust: rm.types.Motion, victory: rm.types.Motion, wait: rm.types.Motion, walk: rm.types.Motion };
 }
 
 /**
@@ -16531,7 +16531,7 @@ export class Window_Base extends Window {
 	 * @param text
 	 * @returns {width:Int, height:Int}
 	 */
-	textSizeEx(text: string): {height: number, width: number};
+	textSizeEx(text: string): { height: number, width: number };
 	/**
 	 * Processes all the text in the window, then
 	 * flushes the text state.
