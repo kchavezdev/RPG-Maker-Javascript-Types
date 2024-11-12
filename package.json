@@ -1,27 +1,28 @@
 {
-  "name": "lunalite",
+  "name": "rpgm-types",
   "version": "1.0.0",
-  "description": "> Documentation for the RPGMakerMV & MZ Platform",
+  "description": "Documentation for the RPG Maker MV & MZ Platforms",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "createdefs": "node combine-definitions.js", 
-    "createdocsmv": "typedoc --mode file --readme READMEMV.md --includeDeclarations --ignoreCompilerErrors --name 'LunaLite-MV' -out docs/ definitions/lunalite-pixi-mv.d.ts",
-    "createdocsmz": "typedoc --mode file --readme READMEMZ.md --includeDeclarations --ignoreCompilerErrors --name 'Lunalite-MZ' --out docs/ definitions/lunalite-pixi-mz.d.ts"
+    "createdocdefs": "node combine-definitions.js",
+    "createdist": "node create-dist.js",
+    "createdocsmv": "typedoc --mode file --readme READMEMV.md --includeDeclarations --ignoreCompilerErrors --name 'LunaLite-MV' --out docs/ definitions/rmmv-types.d.ts",
+    "createdocsmz": "typedoc --mode file --readme READMEMZ.md --includeDeclarations --ignoreCompilerErrors --name 'Lunalite-MZ' --out docs/ definitions/rmmz-types.d.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LunaTechsDev/LunaLite.git"
+    "url": "git+https://github.com/kchavezdev/RPG-Maker-Javascript-Types.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LunaTechsDev/LunaLite/issues"
+    "url": "https://github.com/kchavezdev/RPG-Maker-Javascript-Types/issues"
   },
-  "homepage": "https://github.com/LunaTechsDev/LunaLite#readme",
+  "homepage": "https://github.com/kchavezdev/RPG-Maker-Javascript-Types#readme",
   "dependencies": {
     "typedoc": "^0.18.0",
     "typescript": "^4.0.2"
