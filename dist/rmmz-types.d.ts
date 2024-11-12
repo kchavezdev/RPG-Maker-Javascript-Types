@@ -5566,7 +5566,7 @@ declare namespace PIXI {
      * @memberof PIXI
      */
     class CubeTexture extends PIXI.BaseTexture {
-        static from(resources: string|HTMLImageElement|HTMLCanvasElement|SVGElement|HTMLVideoElement, options?: any): BaseTexture;
+        static from(resources: string | HTMLImageElement | HTMLCanvasElement | SVGElement | HTMLVideoElement, options?: any): BaseTexture;
         /**
          * Generate a new CubeTexture.
          * @static
@@ -23986,7 +23986,7 @@ declare interface OffscreenCanvas {
 
 declare namespace PIXI {
     namespace utils {
-// https://github.com/primus/eventemitter3
+        // https://github.com/primus/eventemitter3
         export interface EventEmitter {
             /**
              * Return an array listing the events for which the emitter has registered listeners.
@@ -24264,7 +24264,7 @@ declare module "pixi.js" {
 /**
  * Allows you to map pixels to the screen or draw rectangles.
  */
-export class Bitmap {
+declare class Bitmap {
 	/**
 	 * The basic object that represents an image.
 	 *
@@ -24585,7 +24585,7 @@ export class Bitmap {
 	static snap(stage: Stage): Bitmap;
 }
 
-export class CacheEntry {
+declare class CacheEntry {
 	/**
 	 * The resource class. Allows to be collected as a garbage if not use for some time or ticks
 	 *
@@ -24620,7 +24620,7 @@ export class CacheEntry {
 	touch(): void;
 }
 
-export class CacheMap {
+declare class CacheMap {
 	/**
 	 * Cache for images, audio, or any other kind of resource
 	 * @param manager
@@ -24647,7 +24647,7 @@ export class CacheMap {
  *
  * @class Graphics
  */
-export class Graphics {
+declare class Graphics {
 	protected constructor();
 	/**
 	 * The total frame count of the game screen.
@@ -24930,7 +24930,7 @@ export class Graphics {
 	static _renderer: PIXI.AbstractRenderer;
 }
 
-export class HTML5Audio {
+declare class HTML5Audio {
 	protected constructor();
 	_initialized: boolean;
 	_unlocked: boolean;
@@ -25055,7 +25055,7 @@ export class HTML5Audio {
 	seek(): void;
 }
 
-export class Input {
+declare class Input {
 	protected constructor();
 	/**
 	 * The wait time of the key repeat in frames.
@@ -25187,7 +25187,7 @@ export class Input {
  *
  * @class JsonEx
  */
-export class JsonEx {
+declare class JsonEx {
 	protected constructor();
 	/**
 	 * The maximum depth of objects.
@@ -25227,7 +25227,7 @@ export class JsonEx {
 	static parse(json: string): any;
 }
 
-export namespace PIXI {
+declare namespace PIXI {
 	export class Point {
 		/**
 		 * The Point object represents a location in a two-dimensional coordinate system, where x represents
@@ -25285,7 +25285,7 @@ export namespace PIXI {
 	}
 }
 
-export class Point extends PIXI.Point {
+declare class Point extends PIXI.Point {
 	/**
 	 * The point class.
 	 *
@@ -25311,7 +25311,7 @@ export class Point extends PIXI.Point {
 	y: number;
 }
 
-export namespace pixi.core.math.shapes {
+declare namespace pixi.core.math.shapes {
 	export class Shape {
 		protected constructor();
 		/**
@@ -25330,7 +25330,7 @@ export namespace pixi.core.math.shapes {
 	}
 }
 
-export namespace PIXI {
+declare namespace PIXI {
 	export class Rectangle extends pixi.core.math.shapes.Shape {
 		/**
 		 * the Rectangle object is an area defined by its position, as indicated by its top-left corner point (x, y) and by its width and its height.
@@ -25435,7 +25435,7 @@ export namespace PIXI {
 	}
 }
 
-export class Rectangle extends PIXI.Rectangle {
+declare class Rectangle extends PIXI.Rectangle {
 	/**
 	 * The rectangle class.
 	 *
@@ -25455,7 +25455,7 @@ export class Rectangle extends PIXI.Rectangle {
 	static emptyRectangle: Rectangle;
 }
 
-export namespace PIXI.utils {
+declare namespace PIXI.utils {
 	export class EventEmitter {
 		/**
 		 * Minimal EventEmitter interface that is molded against the Node.js
@@ -25528,7 +25528,7 @@ export namespace PIXI.utils {
 	}
 }
 
-export namespace PIXI.interaction {
+declare namespace PIXI.interaction {
 	export class interactiveTarget extends PIXI.utils.EventEmitter {
 		protected constructor();
 		/**
@@ -25789,7 +25789,7 @@ export namespace PIXI.interaction {
 	}
 }
 
-export namespace pixi.core.display {
+declare namespace pixi.core.display {
 	export type DestroyOptions = {
 		/**
 		 * {boolean} [options.baseTexture=false] - Only used for child Sprites if options.children is set to true
@@ -25809,7 +25809,7 @@ export namespace pixi.core.display {
 	}
 }
 
-export namespace PIXI {
+declare namespace PIXI {
 	export class DisplayObject extends PIXI.interaction.interactiveTarget {
 		/**
 		 * The base class for all objects that are rendered on the screen.
@@ -26065,7 +26065,7 @@ export namespace PIXI {
 	}
 }
 
-export namespace PIXI {
+declare namespace PIXI {
 	export class Container extends PIXI.DisplayObject {
 		/**
 		 * A Container represents a collection of display objects.
@@ -26175,7 +26175,7 @@ export namespace PIXI {
 	}
 }
 
-export namespace PIXI {
+declare namespace PIXI {
 	export class Sprite extends PIXI.Container {
 		/**
 		 * The Sprite object is the base for all textured objects that are rendered to the screen
@@ -26274,7 +26274,7 @@ export namespace PIXI {
 	}
 }
 
-export class ScreenSprite extends PIXI.Sprite {
+declare class ScreenSprite extends PIXI.Sprite {
 	/**
 	 * The sprite which covers the entire game screen.
 	 *
@@ -26312,7 +26312,7 @@ export class ScreenSprite extends PIXI.Sprite {
 	setColor(r?: number, g?: number, b?: number): void;
 }
 
-export class Tilemap extends PIXI.Container {
+declare class Tilemap extends PIXI.Container {
 	/**
 	 * [read-only] The array of children of the sprite.
 	 *
@@ -26486,7 +26486,7 @@ export class Tilemap extends PIXI.Container {
 	static isWaterfallTypeAutotile(tileId: number): boolean;
 }
 
-export class ShaderTilemap extends Tilemap {
+declare class ShaderTilemap extends Tilemap {
 	protected constructor();
 	/**
 	 * PIXI render method
@@ -26516,7 +26516,7 @@ export class ShaderTilemap extends Tilemap {
 	refreshTileset(): void;
 }
 
-export class Sprite extends PIXI.Sprite {
+declare class Sprite extends PIXI.Sprite {
 	/**
 	 * The basic object that is rendered to the game screen.
 	 *
@@ -26705,7 +26705,7 @@ export class Sprite extends PIXI.Sprite {
 	static _counter: number;
 }
 
-export class Stage extends PIXI.Container {
+declare class Stage extends PIXI.Container {
 	/**
 	 * The root object of the display tree.
 	 *
@@ -26748,7 +26748,7 @@ export class Stage extends PIXI.Container {
 	removeChildAt(index: number): PIXI.DisplayObject;
 }
 
-export namespace PIXI {
+declare namespace PIXI {
 	export class TilingSprite extends PIXI.Sprite {
 		/**
 		 * A tiling sprite is a fast way of rendering a tiling image
@@ -26831,7 +26831,7 @@ export namespace PIXI {
 	}
 }
 
-export class TilingSprite extends PIXI.TilingSprite {
+declare class TilingSprite extends PIXI.TilingSprite {
 	/**
 	 * The sprite object for a tiling image.
 	 *
@@ -26922,7 +26922,7 @@ export class TilingSprite extends PIXI.TilingSprite {
 	generateTilingTexture(arg: boolean): void;
 }
 
-export namespace PIXI {
+declare namespace PIXI {
 	export class Filter {
 		/**
 		 * @class
@@ -27014,7 +27014,7 @@ export namespace PIXI {
 	}
 }
 
-export namespace PIXI.filters {
+declare namespace PIXI.filters {
 	export class ColorMatrixFilter extends PIXI.Filter {
 		/**
 		 * The ColorMatrixFilter class lets you apply a 5x5 matrix transformation on the RGBA
@@ -27146,7 +27146,7 @@ export namespace PIXI.filters {
 	}
 }
 
-export class ToneFilter extends PIXI.filters.ColorMatrixFilter {
+declare class ToneFilter extends PIXI.filters.ColorMatrixFilter {
 	/**
 	 * The color matrix filter for WebGL.
 	 *
@@ -27180,7 +27180,7 @@ export class ToneFilter extends PIXI.filters.ColorMatrixFilter {
 	adjustTone(r?: number, g?: number, b?: number): void;
 }
 
-export class ToneSprite extends PIXI.Container {
+declare class ToneSprite extends PIXI.Container {
 	/**
 	 * The sprite which changes the screen color in 2D canvas mode.
 	 *
@@ -27206,13 +27206,13 @@ export class ToneSprite extends PIXI.Container {
 	setTone(r: number, g: number, b: number, gray: number): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum Frames {
 		base = -1,
 	}
 }
 
-export class TouchInput {
+declare class TouchInput {
 	protected constructor();
 	static _mousePressed: boolean;
 	static _screenPressed: boolean;
@@ -27356,7 +27356,7 @@ export class TouchInput {
 	static isReleased(): boolean;
 }
 
-export class Utils {
+declare class Utils {
 	protected constructor();
 	/**
 	 * The name of the RPG Maker. 'MV' in the current version.
@@ -27434,7 +27434,7 @@ export class Utils {
 	static encodeURI(str: string): string;
 }
 
-export class Weather extends PIXI.Container {
+declare class Weather extends PIXI.Container {
 	/**
 	 * The weather effect which displays rain, storm, or snow.
 	 *
@@ -27471,7 +27471,7 @@ export class Weather extends PIXI.Container {
 	update(): void;
 }
 
-export class WindowLayer extends PIXI.Container {
+declare class WindowLayer extends PIXI.Container {
 	/**
 	 * The layer which contains game windows.
 	 *
@@ -27549,7 +27549,7 @@ export class WindowLayer extends PIXI.Container {
 	_renderWebGL(renderer: PIXI.Renderer): void;
 }
 
-export class Window extends PIXI.Container {
+declare class Window extends PIXI.Container {
 	/**
 	 * The visibility of the sprite.
 	 *
@@ -27784,7 +27784,7 @@ export class Window extends PIXI.Container {
 	updateTransform(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type AudioParameters = {
 		name: string;
 		pan: number;
@@ -27797,7 +27797,7 @@ export namespace rm.types {
 /**
  * Static class that handles BGM, BGS, ME, and SE.
  */
-export class AudioManager {
+declare class AudioManager {
 	protected constructor();
 	static _bgmVolume: number;
 	static _bgsVolume: number;
@@ -27857,7 +27857,7 @@ export class AudioManager {
 	static createDecryptBuffer(url: string, bgm: rm.types.AudioParameters, pos?: number): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * A superclass of actor, class, skill, item, weapon, armor, enemy, and state.
 	 *
@@ -27885,7 +27885,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type BattleRewards = {
 		exp: number;
 		gold: number;
@@ -27893,7 +27893,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum BattleResult {
 		base = -1,
 	}
@@ -27903,7 +27903,7 @@ export namespace rm.types {
  * Manages the game battles to process all of the
  * events that happen within.
  */
-export class BattleManager {
+declare class BattleManager {
 	protected constructor();
 	_phase: string;
 	_canEscape: boolean;
@@ -28009,11 +28009,11 @@ export class BattleManager {
 	static gainDropItems(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum DamageColorType {
 		HP_DAMAGE = 0,
 		HP_RECOVER = 1,
@@ -28023,7 +28023,7 @@ export namespace rm.types {
 	}
 }
 
-export class ColorManager {
+declare class ColorManager {
 	protected constructor();
 	_windowSkin: Bitmap;
 	/**
@@ -28193,7 +28193,7 @@ export class ColorManager {
 	static itemBackColor2(): rm.types.Color;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type ConfigData = {
 		alwaysDash: boolean;
 		bgmVolume: number;
@@ -28207,7 +28207,7 @@ export namespace rm.types {
 /**
  * Manages the configuration of RPGMakerMZ Config Data.
  */
-export class ConfigManager {
+declare class ConfigManager {
 	protected constructor();
 	static load(): void;
 	static save(): void;
@@ -28221,12 +28221,12 @@ export class ConfigManager {
  * Manages the game data: saving, loading, meta data,
  * and map information.
  */
-export class DataManager {
+declare class DataManager {
 	protected constructor();
 	static _globalId: string;
 	static _lastAccessId: number;
 	static _errorUrl: any;
-	static _databaseFiles: JSON[];
+	static _databaseFiles: any[];
 	static loadDatabase(): void;
 	static loadDataFile(name: string, src: string): void;
 	static isDatabaseLoaded(): boolean;
@@ -28363,7 +28363,7 @@ export class DataManager {
 	static extractSaveContents(contents: any): void;
 }
 
-export class EffectManager {
+declare class EffectManager {
 	protected constructor();
 	static _cache: { [key: string]: any };
 	static _errorUrls: any[];
@@ -28414,7 +28414,7 @@ export class EffectManager {
  * Static class that manages images. Loading the images
  * and create bitmap objects.
  */
-export class ImageManager {
+declare class ImageManager {
 	protected constructor();
 	/**
 	 *  returns 32
@@ -28566,7 +28566,7 @@ export class ImageManager {
 	 * @returns {Bitmap}
 	 * @memberof ImageManagerStatic
 	 */
-	static loadBitmap(folder: string, filename: string, hue: number, smooth: boolean): Bitmap;
+	static loadBitmap(folder: string, filename: string): Bitmap;
 	/**
 	 * Loads an empty Bitmap object and returns it.
 	 *
@@ -28620,7 +28620,7 @@ export class ImageManager {
 	static isZeroParallax(filename: string): boolean;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * Plugin Settings for RPGMakerMV/MZ
 	 */
@@ -28651,7 +28651,7 @@ export namespace rm.types {
 /**
  * Static class that manages plugins
  */
-export class PluginManager {
+declare class PluginManager {
 	protected constructor();
 	static _path: string;
 	static _scripts: string[];
@@ -28717,7 +28717,7 @@ export class PluginManager {
 /**
  * Manages the scenes of the game.
  */
-export class SceneManager {
+declare class SceneManager {
 	protected constructor();
 	static _scene: Scene_Base;
 	static _nextScene: Scene_Base;
@@ -28794,7 +28794,7 @@ export class SceneManager {
 /**
  * Static class that plays sound effects defined in the database.
  */
-export class SoundManager {
+declare class SoundManager {
 	protected constructor();
 	static preloadImportantSounds(): void;
 	static loadSystemSound(databaseNumber: number): void;
@@ -28828,7 +28828,7 @@ export class SoundManager {
 /**
  * The static class that manages storage of save game data.
  */
-export class StorageManager {
+declare class StorageManager {
 	protected constructor();
 	static saveObject(saveName: string, object: any): Promise<any>;
 	static loadObject(object: any): Promise<any>;
@@ -28884,7 +28884,7 @@ export class StorageManager {
  * This is linked to the terms and information
  * contained within the editor.
  */
-export class TextManager {
+declare class TextManager {
 	protected constructor();
 	static currencyUnit: string;
 	static level: string;
@@ -28979,7 +28979,7 @@ export class TextManager {
 	static getter(method: string, param: number): string;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for enemy [Actions].
 	 */
@@ -29015,7 +29015,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for damage.
 	 */
@@ -29051,7 +29051,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for use effects.
 	 */
@@ -29075,7 +29075,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type UsableItem = {
 		/**
 		 * The animation ID.
@@ -29165,7 +29165,7 @@ export namespace rm.types {
  * The game object class representing a battle action.
  * @class Game_Action
  */
-export class Game_Action {
+declare class Game_Action {
 	constructor(subject: Game_Battler, forcing: boolean);
 	_subjectActorId: number;
 	_subjectEnemyIndex: number;
@@ -29285,15 +29285,15 @@ export class Game_Action {
 	static HITTYPE_MAGICAL: number;
 }
 
-export namespace haxe.display {
+declare namespace haxe.display {
 
 }
 
-export namespace haxe.display {
+declare namespace haxe.display {
 
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type Trait = {
 		/**
 		 * The trait code.
@@ -29322,7 +29322,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for state.
 	 */
@@ -29440,7 +29440,7 @@ export namespace rm.types {
  * member variables in this declare class are public.
  * @class Game_ActionResult
  */
-export class Game_ActionResult {
+declare class Game_ActionResult {
 	constructor();
 	used: boolean;
 	missed: boolean;
@@ -29506,7 +29506,7 @@ export class Game_ActionResult {
 	pushRemovedBuff(paramId: number): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for skills.
 	 */
@@ -29622,7 +29622,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for items.
 	 */
@@ -29725,7 +29725,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * A superclass of weapons and armor.
 	 */
@@ -29789,7 +29789,7 @@ export namespace rm.types {
  * The superdeclare class of Game_Battler. It mainly contains parameters calculation.
  * @class Game_BattlerBase
  */
-export class Game_BattlerBase {
+declare class Game_BattlerBase {
 	constructor();
 	initialize(): void;
 	_hp: number;
@@ -30638,7 +30638,7 @@ export class Game_BattlerBase {
 	static ICON_DEBUFF_START: number;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type BattlerAnimation = {
 		animationId: number;
 		delay: number;
@@ -30646,7 +30646,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum MotionType {
 		WALK = "walk",
 		WAIT = "wait",
@@ -30668,25 +30668,25 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum WeaponImageId {
 		base = -1,
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum AnimationId {
 		base = -1,
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum ActionState {
 		base = "",
 	}
 }
 
-export class Game_Battler extends Game_BattlerBase {
+declare class Game_Battler extends Game_BattlerBase {
 	protected constructor();
 	_actions: Game_Action[];
 	_speed: number;
@@ -31222,7 +31222,7 @@ export class Game_Battler extends Game_BattlerBase {
 	performCollapse(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for actors.
 	 */
@@ -31292,7 +31292,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for weapons.
 	 */
@@ -31357,7 +31357,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for armor.
 	 */
@@ -31418,7 +31418,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for a class's [Skills to Learn].
 	 */
@@ -31441,7 +31441,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for class.
 	 */
@@ -31495,7 +31495,7 @@ export namespace rm.types {
 	}
 }
 
-export class Game_Actor extends Game_Battler {
+declare class Game_Actor extends Game_Battler {
 	constructor(actorId: number);
 	_actorId: number;
 	_name: string;
@@ -32185,7 +32185,7 @@ export class Game_Actor extends Game_Battler {
 	testEscape(item: rm.types.BaseItem): boolean;
 }
 
-export class Game_Actors {
+declare class Game_Actors {
 	constructor();
 	/**
 	 * List of all Game_Actor in the database.
@@ -32202,7 +32202,7 @@ export class Game_Actors {
 	actor(actorId: number): Game_Actor;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum MoveSpeed {
 		X8SLOWER = 1,
 		X4SLOWER = 2,
@@ -32213,7 +32213,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum MoveFrequency {
 		LOWEST = 1,
 		LOWER = 2,
@@ -32223,17 +32223,17 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum Direction {
 		base = -1,
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum CharacterPriority {
 		BELOW_CHARACTERS = 0,
 		SAME_AS_CHARACTERS = 1,
@@ -32241,7 +32241,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum BalloonId {
 		EXCLAMATION = 0,
 		QUESTION = 1,
@@ -32261,7 +32261,7 @@ export namespace rm.types {
  * information such as coordinates, images, and more
  * shared by all characters.
  */
-export class Game_CharacterBase {
+declare class Game_CharacterBase {
 	constructor();
 	_x: number;
 	_y: number;
@@ -32627,7 +32627,7 @@ export class Game_CharacterBase {
 	endBalloon(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for the Move command.
 	 */
@@ -32643,7 +32643,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for the Move route.
 	 */
@@ -32671,7 +32671,7 @@ export namespace rm.types {
  * Super class of Game_Player, Game_Follower, Game_Vehicle,
  * and Game_Event.
  */
-export class Game_Character extends Game_CharacterBase {
+declare class Game_Character extends Game_CharacterBase {
 	protected constructor();
 	_moveRouteForcing: boolean;
 	_moveRoute: rm.types.MoveRoute;
@@ -32888,7 +32888,7 @@ export class Game_Character extends Game_CharacterBase {
 	static ROUTE_SCRIPT: number;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for the Event command.
 	 */
@@ -32908,7 +32908,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for common events.
 	 */
@@ -32936,7 +32936,7 @@ export namespace rm.types {
 	}
 }
 
-export class Game_CommonEvent {
+declare class Game_CommonEvent {
 	constructor(commonEventId: number);
 	_commonEventId: number;
 	_interpreter: Game_Interpreter;
@@ -32976,7 +32976,7 @@ export class Game_CommonEvent {
 	update(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type EnemyDropItem = {
 		/**
 		 * The ID of the data depending on the type of dropped item (item, weapon, or armor).
@@ -32998,7 +32998,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type Enemy = {
 		/**
 		 * The enemy's action pattern. An array of RPG.Enemy.Action.
@@ -33067,7 +33067,7 @@ export namespace rm.types {
  * The game object declare class for an enemy.
  * @class Game_Enemy
  */
-export class Game_Enemy extends Game_Battler {
+declare class Game_Enemy extends Game_Battler {
 	constructor(enemyId: number, x: number, y: number);
 	_enemyId: number;
 	_letter: string;
@@ -33197,7 +33197,7 @@ export class Game_Enemy extends Game_Battler {
 	selectAllActions(actionList: rm.types.EnemyAction[]): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum MoveType {
 		FIXED = 0,
 		RANDOM = 1,
@@ -33206,13 +33206,13 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum EventTrigger {
 		base = -1,
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for the event page conditions.
 	 */
@@ -33272,7 +33272,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for the Event page [Graphics].
 	 */
@@ -33300,7 +33300,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for the event page.
 	 */
@@ -33360,7 +33360,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for map events.
 	 */
@@ -33394,7 +33394,7 @@ export namespace rm.types {
  * THe game object class for an event. It contains functionality
  * for event page switching and running parallel process events.
  */
-export class Game_Event extends Game_Character {
+declare class Game_Event extends Game_Character {
 	constructor(mapId: number, eventId: number);
 	_mapId: number;
 	_eventId: number;
@@ -33564,7 +33564,7 @@ export class Game_Event extends Game_Character {
  * other than the front character, displayed in the party.
  * @class Game_Follower
  */
-export class Game_Follower extends Game_Character {
+declare class Game_Follower extends Game_Character {
 	constructor(memberIndex: number);
 	_memberIndex: number;
 	refresh(): void;
@@ -33604,7 +33604,7 @@ export class Game_Follower extends Game_Character {
  * The wrapper declare class for a follower array.
  * @class Game_Followers
  */
-export class Game_Followers {
+declare class Game_Followers {
 	constructor();
 	_visible: boolean;
 	_gathering: boolean;
@@ -33712,7 +33712,7 @@ export class Game_Followers {
  * The interpreter for running event commands.
  * @class Game_Interpreter
  */
-export class Game_Interpreter {
+declare class Game_Interpreter {
 	constructor(depth: number);
 	_depth: number;
 	_branch: Object;
@@ -34322,7 +34322,7 @@ export class Game_Interpreter {
  * This is required, because the save data should not include the database object itself.
  * @class Game_Item
  */
-export class Game_Item {
+declare class Game_Item {
 	constructor(item: rm.types.BaseItem);
 	_dataClass: string;
 	_itemId: number;
@@ -34394,7 +34394,7 @@ export class Game_Item {
 	setEquip(isWeapon: boolean, itemId: number): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for tile sets.
 	 */
@@ -34458,7 +34458,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type MapEncounter = {
 		/**
 		 * An array containing Region IDs.
@@ -34480,7 +34480,7 @@ export namespace rm.types {
  * The game object for the map. It contains scrolling and passage functions
  * along with the game interpreter.
  */
-export class Game_Map {
+declare class Game_Map {
 	constructor();
 	_interpreter: Game_Interpreter;
 	_mapId: number;
@@ -34932,43 +34932,43 @@ export class Game_Map {
 	isAnyEventStarting(): boolean;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum MessageBackgroundType {
 		base = -1,
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum MessagePositionType {
 		base = -1,
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum ChoiceDefaultType {
 		base = -1,
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum ChoiceCancelType {
 		base = -1,
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum ChocieBackgroundType {
 		base = -1,
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum ChoicePositionType {
 		base = -1,
 	}
 }
 
-export class Game_Message {
+declare class Game_Message {
 	constructor();
 	_texts: string[];
 	_choices: string[];
@@ -35212,7 +35212,7 @@ export class Game_Message {
  *
  * @class Game_Unit
  */
-export class Game_Unit {
+declare class Game_Unit {
 	constructor();
 	_inBattle: boolean;
 	initialize(): void;
@@ -35326,7 +35326,7 @@ export class Game_Unit {
  * The game object for the party. Contains information
  * such as gold and items.
  */
-export class Game_Party extends Game_Unit {
+declare class Game_Party extends Game_Unit {
 	protected constructor();
 	_gold: number;
 	_steps: number;
@@ -35460,7 +35460,7 @@ export class Game_Party extends Game_Unit {
 	 * @memberof Game_Party
 	 */
 	allItems(): rm.types.BaseItem[];
-	itemContainer(item: rm.types.BaseItem): {ItemId: number};
+	itemContainer(item: rm.types.BaseItem): { ItemId: number };
 	/**
 	 * Sets up the starting party members.
 	 *
@@ -35712,7 +35712,7 @@ export class Game_Party extends Game_Unit {
  * The game object class for a picture.
  *
  */
-export class Game_Picture {
+declare class Game_Picture {
 	constructor();
 	/**
 	 * _name property of the current picture.
@@ -35864,7 +35864,7 @@ export class Game_Picture {
  * the player is dashing. The Game Player State is this
  * object.
  */
-export class Game_Player extends Game_Character {
+declare class Game_Player extends Game_Character {
 	protected constructor();
 	_vehicleType: string;
 	_vehicleGettingOn: boolean;
@@ -36220,7 +36220,7 @@ export class Game_Player extends Game_Character {
  * aliased as $gameScreen.
  * @class Game_Screen
  */
-export class Game_Screen {
+declare class Game_Screen {
 	constructor();
 	initialize(): void;
 	clear(): void;
@@ -36425,7 +36425,7 @@ export class Game_Screen {
 /**
  *  The game object class for self switches.
  */
-export class Game_SelfSwitches {
+declare class Game_SelfSwitches {
 	constructor();
 	/**
 	 * {key: Array<Any>}
@@ -36462,7 +36462,7 @@ export class Game_SelfSwitches {
  *
  * @class Game_Switches
  */
-export class Game_Switches {
+declare class Game_Switches {
 	constructor();
 	_data: boolean[];
 	initialize(): void;
@@ -36472,7 +36472,7 @@ export class Game_Switches {
 	onChange(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for audio file.
 	 */
@@ -36501,7 +36501,7 @@ export namespace rm.types {
  * The game object class representing system data.
  * @class Game_System
  */
-export class Game_System {
+declare class Game_System {
 	protected constructor();
 	initialize(): void;
 	isJapanese(): boolean;
@@ -36740,7 +36740,7 @@ export class Game_System {
  * included in the save data.
  * @class Game_Temp
  */
-export class Game_Temp {
+declare class Game_Temp {
 	constructor();
 	_isPlaytest: boolean;
 	_commonEventId: number;
@@ -36823,7 +36823,7 @@ export class Game_Temp {
  *
  * @class Game_Timer
  */
-export class Game_Timer {
+declare class Game_Timer {
 	constructor();
 	_frames: number;
 	_working: boolean;
@@ -36870,7 +36870,7 @@ export class Game_Timer {
 	onExpire(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type TroopMember = {
 		/**
 		 * The enemy ID.
@@ -36891,7 +36891,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class of battle event [Conditions].
 	 */
@@ -36947,7 +36947,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for battle events (pages).
 	 */
@@ -36967,7 +36967,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type Troop = {
 		/**
 		 * The troop ID.
@@ -36995,7 +36995,7 @@ export namespace rm.types {
  * The game object declare class for a troop and the battle-related data.
  * @class Game_Troop
  */
-export class Game_Temp extends Game_Unit {
+declare class Game_Temp extends Game_Unit {
 	constructor();
 	_interpreter: Game_Interpreter;
 	_troopId: number;
@@ -37119,7 +37119,7 @@ export class Game_Temp extends Game_Unit {
 /**
  * The game object class for game variables.
  */
-export class Game_Variables {
+declare class Game_Variables {
 	constructor();
 	_data: number[];
 	initialize(): void;
@@ -37129,7 +37129,7 @@ export class Game_Variables {
 	onChange(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for vehicles.
 	 */
@@ -37164,7 +37164,7 @@ export namespace rm.types {
 /**
  * The game object class for a vehicle.
  */
-export class Game_Vehicle extends Game_Character {
+declare class Game_Vehicle extends Game_Character {
 	constructor(type: string);
 	_type: string;
 	_mapId: number;
@@ -37341,7 +37341,7 @@ export class Game_Vehicle extends Game_Character {
 	isLandOk(x: number, y: number, d: rm.types.Direction): boolean;
 }
 
-export class Scene_Base extends Stage {
+declare class Scene_Base extends Stage {
 	constructor();
 	_windowLayer: WindowLayer;
 	/**
@@ -37454,7 +37454,7 @@ export class Scene_Base extends Stage {
 	slowFadeSpeed(): number;
 }
 
-export class Scene_Message extends Scene_Base {
+declare class Scene_Message extends Scene_Base {
 	protected constructor();
 	isMessageWindowClosing: boolean;
 	_choiceListWindow: Window_ChoiceList;
@@ -37479,7 +37479,7 @@ export class Scene_Message extends Scene_Base {
 /**
  * Scene class of the battle screen.
  */
-export class Scene_Battle extends Scene_Message {
+declare class Scene_Battle extends Scene_Message {
 	protected constructor();
 	updateBattleProcess(): void;
 	isAnyInputWindowActive(): boolean;
@@ -37698,7 +37698,7 @@ export class Scene_Battle extends Scene_Message {
 	endCommandSelection(): void;
 }
 
-export class Scene_Boot extends Scene_Base {
+declare class Scene_Boot extends Scene_Base {
 	protected constructor();
 	_databaseLoaded: boolean;
 	onDatabaseLoaded(): void;
@@ -37733,7 +37733,7 @@ export class Scene_Boot extends Scene_Base {
 /**
  * The super class of all menu-type scenes
  */
-export class Scene_MenuBase extends Scene_Base {
+declare class Scene_MenuBase extends Scene_Base {
 	protected constructor();
 	/**
 	 * Returns the current game actor.
@@ -37802,7 +37802,7 @@ export class Scene_MenuBase extends Scene_Base {
 /**
  * Scene class of the debug menu screen.
  */
-export class Scene_Debug extends Scene_MenuBase {
+declare class Scene_Debug extends Scene_MenuBase {
 	protected constructor();
 	/**
 	 * Creates the range window.
@@ -37840,7 +37840,7 @@ export class Scene_Debug extends Scene_MenuBase {
 /**
  * Scene class of the equipment screen.
  */
-export class Scene_Equip extends Scene_MenuBase {
+declare class Scene_Equip extends Scene_MenuBase {
 	protected constructor();
 	statusWindowRect(): Rectangle;
 	commandWindowRect(): Rectangle;
@@ -37900,7 +37900,7 @@ export class Scene_Equip extends Scene_MenuBase {
 /**
  *  Super class of Scene_Save and Scene_Load
  */
-export class Scene_File extends Scene_MenuBase {
+declare class Scene_File extends Scene_MenuBase {
 	protected constructor();
 	isSavefileEnabled(): boolean;
 	listWindowRect(): Rectangle;
@@ -37933,7 +37933,7 @@ export class Scene_File extends Scene_MenuBase {
 /**
  * Scene class of the game end screen.
  */
-export class Scene_GameEnd extends Scene_MenuBase {
+declare class Scene_GameEnd extends Scene_MenuBase {
 	protected constructor();
 	commandWindowRect(): Rectangle;
 	stop(): void;
@@ -37960,7 +37960,7 @@ export class Scene_GameEnd extends Scene_MenuBase {
 /**
  * Scene class of the game over screen.
  */
-export class Scene_Gameover extends Scene_Base {
+declare class Scene_Gameover extends Scene_Base {
 	protected constructor();
 	adjustBackground(): void;
 	stop(): void;
@@ -37988,7 +37988,7 @@ export class Scene_Gameover extends Scene_Base {
  * Super class of all public function item(skill, items, etc) screen scenes.
  * Super class of Scene_Item & Scene_Skill.
  */
-export class Scene_ItemBase extends Scene_Base {
+declare class Scene_ItemBase extends Scene_Base {
 	protected constructor();
 	actorWindowRect(): Rectangle;
 	/**
@@ -38079,7 +38079,7 @@ export class Scene_ItemBase extends Scene_Base {
  * @class Scene_Item
  * @extends {Scene_ItemBase}
  */
-export class Scene_Item extends Scene_ItemBase {
+declare class Scene_Item extends Scene_ItemBase {
 	protected constructor();
 	categoryWindowRect(): Rectangle;
 	itemWindowRect(): Rectangle;
@@ -38124,7 +38124,7 @@ export class Scene_Item extends Scene_ItemBase {
 /**
  * The scene class of the load game screen.
  */
-export class Scene_Load extends Scene_File {
+declare class Scene_Load extends Scene_File {
 	protected constructor();
 	/**
 	 * Returns the mode of the
@@ -38151,7 +38151,7 @@ export class Scene_Load extends Scene_File {
 /**
  * The scene class for the map screen.
  */
-export class Scene_Map extends Scene_Base {
+declare class Scene_Map extends Scene_Base {
 	protected constructor();
 	_lastMapWasNull: boolean;
 	shouldAutosave(): boolean;
@@ -38376,7 +38376,7 @@ export class Scene_Map extends Scene_Base {
 /**
  * The menu scene in your RPGMakerMV game.
  */
-export class Scene_Menu extends Scene_MenuBase {
+declare class Scene_Menu extends Scene_MenuBase {
 	protected constructor();
 	commandWindowRect(): Rectangle;
 	goldWindowRect(): Rectangle;
@@ -38434,7 +38434,7 @@ export class Scene_Menu extends Scene_MenuBase {
 /**
  * Scene class of the name input screen.
  */
-export class Scene_Name extends Scene_MenuBase {
+declare class Scene_Name extends Scene_MenuBase {
 	protected constructor();
 	editWindowRect(): void;
 	inputWindowRect(): Rectangle;
@@ -38470,7 +38470,7 @@ export class Scene_Name extends Scene_MenuBase {
 /**
  * Scene class of the options screen.
  */
-export class Scene_Options extends Scene_MenuBase {
+declare class Scene_Options extends Scene_MenuBase {
 	protected constructor();
 	createOptionsWindow(): void;
 	optionsWindowRect(): Rectangle;
@@ -38481,7 +38481,7 @@ export class Scene_Options extends Scene_MenuBase {
 /**
  * Save game screen scene for RPGMakerMV.
  */
-export class Scene_Save extends Scene_File {
+declare class Scene_Save extends Scene_File {
 	protected constructor();
 	/**
 	 * Returns the mode of the
@@ -38519,7 +38519,7 @@ export class Scene_Save extends Scene_File {
 	onSaveFailure(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum Money {
 		base = -1,
 	}
@@ -38528,7 +38528,7 @@ export namespace rm.types {
 /**
  * Scene class of the shop screen.
  */
-export class Scene_Shop extends Scene_MenuBase {
+declare class Scene_Shop extends Scene_MenuBase {
 	protected constructor();
 	commandWindowRect(): Rectangle;
 	dummyWindowRect(): Rectangle;
@@ -38681,7 +38681,7 @@ export class Scene_Shop extends Scene_MenuBase {
 /**
  * The scene class of the skill screen.
  */
-export class Scene_Skill extends Scene_ItemBase {
+declare class Scene_Skill extends Scene_ItemBase {
 	protected constructor();
 	skillTypeWindowRect(): Rectangle;
 	statusWindowRect(): Rectangle;
@@ -38737,7 +38737,7 @@ export class Scene_Skill extends Scene_ItemBase {
 /**
  * Scene class of the status screen in RPGMakerMV.
  */
-export class Scene_Status extends Scene_MenuBase {
+declare class Scene_Status extends Scene_MenuBase {
 	protected constructor();
 	createProfileWindow(): void;
 	createStatusWindow(): void;
@@ -38762,7 +38762,7 @@ export class Scene_Status extends Scene_MenuBase {
 	onActorChange(): void;
 }
 
-export class Scene_Title extends Scene_Base {
+declare class Scene_Title extends Scene_Base {
 	protected constructor();
 	/**
 	 * The command window for title scene commands like new game, continue, or options.
@@ -38820,7 +38820,7 @@ export class Scene_Title extends Scene_Base {
 	playTitleMusic(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for the timing of an animation's SE and flash effects.
 	 */
@@ -38848,7 +38848,7 @@ export namespace rm.types {
 	}
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	/**
 	 * The data class for animation.
 	 */
@@ -38896,7 +38896,7 @@ export namespace rm.types {
 	}
 }
 
-export class Sprite_Base extends Sprite {
+declare class Sprite_Base extends Sprite {
 	constructor();
 	/**
 	 * The animation sprites assigned to the
@@ -38963,7 +38963,7 @@ export class Sprite_Base extends Sprite {
 	isAnimationPlaying(): boolean;
 }
 
-export class Sprite_Battler extends Sprite_Base {
+declare class Sprite_Battler extends Sprite_Base {
 	protected constructor();
 	_battler: Game_Battler;
 	_homeX: number;
@@ -38998,7 +38998,7 @@ export class Sprite_Battler extends Sprite_Base {
 	updateAnimation(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type Motion = {
 		index: number;
 		loop: boolean;
@@ -39011,7 +39011,7 @@ export namespace rm.types {
  *
  * The sprite for displaying an actor.
  */
-export class Sprite_Actor extends Sprite_Battler {
+declare class Sprite_Actor extends Sprite_Battler {
 	/**
 	 * Creates an instance of Sprite_Actor; can be passed
 	 * a battler on creation.
@@ -39140,7 +39140,7 @@ export class Sprite_Actor extends Sprite_Battler {
 	retreat(): void;
 	damageOffsetX(): number;
 	damageOffsetY(): number;
-	static MOTIONS: {abnormal: rm.types.Motion, chant: rm.types.Motion, damage: rm.types.Motion, dead: rm.types.Motion, dying: rm.types.Motion, escape: rm.types.Motion, evade: rm.types.Motion, guard: rm.types.Motion, item: rm.types.Motion, missile: rm.types.Motion, skill: rm.types.Motion, sleep: rm.types.Motion, spell: rm.types.Motion, swing: rm.types.Motion, thrust: rm.types.Motion, victory: rm.types.Motion, wait: rm.types.Motion, walk: rm.types.Motion};
+	static MOTIONS: { abnormal: rm.types.Motion, chant: rm.types.Motion, damage: rm.types.Motion, dead: rm.types.Motion, dying: rm.types.Motion, escape: rm.types.Motion, evade: rm.types.Motion, guard: rm.types.Motion, item: rm.types.Motion, missile: rm.types.Motion, skill: rm.types.Motion, sleep: rm.types.Motion, spell: rm.types.Motion, swing: rm.types.Motion, thrust: rm.types.Motion, victory: rm.types.Motion, wait: rm.types.Motion, walk: rm.types.Motion };
 }
 
 /**
@@ -39149,7 +39149,7 @@ export class Sprite_Actor extends Sprite_Battler {
  *
  * The sprite for displaying an animation.
  */
-export class Sprite_Animation extends Sprite {
+declare class Sprite_Animation extends Sprite {
 	protected constructor();
 	/**
 	 * {
@@ -39300,7 +39300,7 @@ export class Sprite_Animation extends Sprite {
  *
  * The sprite for displaying a balloon icon.
  */
-export class Sprite_Balloon extends Sprite_Base {
+declare class Sprite_Balloon extends Sprite_Base {
 	protected constructor();
 	_balloonId: rm.types.BalloonId;
 	_duration: number;
@@ -39355,7 +39355,7 @@ export class Sprite_Balloon extends Sprite_Base {
  *
  * The sprite for displaying a button.
  */
-export class Sprite_Button extends Sprite {
+declare class Sprite_Button extends Sprite {
 	protected constructor();
 	_touching: boolean;
 	_coldFrame: Rectangle;
@@ -39447,7 +39447,7 @@ export class Sprite_Button extends Sprite {
  *
  * The sprite for displaying a character.
  */
-export class Sprite_Character extends Sprite_Base {
+declare class Sprite_Character extends Sprite_Base {
 	/**
 	 * Creates an instance of Sprite_Character.
 	 * @param {Game_Character} character
@@ -39610,7 +39610,7 @@ export class Sprite_Character extends Sprite_Base {
  *
  * The sprite for displaying a popup damage.
  */
-export class Sprite_Damage extends Sprite {
+declare class Sprite_Damage extends Sprite {
 	protected constructor();
 	__duration: number;
 	/**
@@ -39677,7 +39677,7 @@ export class Sprite_Damage extends Sprite {
  *
  * The sprite for displaying the destination place of the touch input.
  */
-export class Sprite_Destination extends Sprite {
+declare class Sprite_Destination extends Sprite {
 	protected constructor();
 	_frameCount: number;
 	/**
@@ -39706,7 +39706,7 @@ export class Sprite_Destination extends Sprite {
  *
  * The sprite for displaying an enemy.
  */
-export class Sprite_Enemy extends Sprite_Battler {
+declare class Sprite_Enemy extends Sprite_Battler {
 	constructor(battler: Game_Enemy);
 	_enemy: Game_Enemy;
 	_appeared: boolean;
@@ -39838,7 +39838,7 @@ export class Sprite_Enemy extends Sprite_Battler {
  *
  * The sprite for displaying a picture.
  */
-export class Sprite_Picture {
+declare class Sprite_Picture {
 	constructor(pictureId: number);
 	_pictureId: number;
 	_pictureName: string;
@@ -39859,7 +39859,7 @@ export class Sprite_Picture {
  *
  * The sprite for displaying state icons.
  */
-export class Sprite_StateIcon extends Sprite {
+declare class Sprite_StateIcon extends Sprite {
 	protected constructor();
 	_battler: Game_Battler;
 	_iconIndex: number;
@@ -39899,7 +39899,7 @@ export class Sprite_StateIcon extends Sprite {
  *
  * The sprite for displaying an overlay image for a state.
  */
-export class Sprite_StateOverlay extends Sprite_Base {
+declare class Sprite_StateOverlay extends Sprite_Base {
 	protected constructor();
 	_battler: Game_Battler;
 	_overlayIndex: number;
@@ -39939,7 +39939,7 @@ export class Sprite_StateOverlay extends Sprite_Base {
  *
  * The sprite for displaying the timer.
  */
-export class Sprite_Timer extends Sprite {
+declare class Sprite_Timer extends Sprite {
 	protected constructor();
 	_seconds: number;
 	/**
@@ -39987,7 +39987,7 @@ export class Sprite_Timer extends Sprite {
  *
  * The sprite for displaying a weapon image for attacking.
  */
-export class Sprite_Weapon extends Sprite_Base {
+declare class Sprite_Weapon extends Sprite_Base {
 	protected constructor();
 	_weaponImageId: rm.types.WeaponImageId;
 	_animaationCount: number;
@@ -40033,7 +40033,7 @@ export class Sprite_Weapon extends Sprite_Base {
  *
  * The superdeclare class of Spriteset_Map and Spriteset_Battle.
  */
-export class Spriteset_Base extends Sprite {
+declare class Spriteset_Base extends Sprite {
 	protected constructor();
 	_tone: number[];
 	_baseSprite: Sprite;
@@ -40131,7 +40131,7 @@ export class Spriteset_Base extends Sprite {
  *
  * The set of sprites on the battle screen.
  */
-export class Spriteset_Battle extends Spriteset_Base {
+declare class Spriteset_Battle extends Spriteset_Base {
 	protected constructor();
 	_battlebackLocated: boolean;
 	_backgroundSprite: Sprite;
@@ -40327,7 +40327,7 @@ export class Spriteset_Battle extends Spriteset_Base {
  *
  * The set of sprites on the map screen.
  */
-export class Spriteset_Map extends Spriteset_Base {
+declare class Spriteset_Map extends Spriteset_Base {
 	protected constructor();
 	_parallax: TilingSprite;
 	_tilemap: Tilemap | ShaderTilemap;
@@ -40412,7 +40412,7 @@ export class Spriteset_Map extends Spriteset_Base {
 	updateWeather(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export type TextState = {
 		buffer: string;
 		drawing: boolean;
@@ -40428,7 +40428,7 @@ export namespace rm.types {
 	}
 }
 
-export class Window_Base extends Window {
+declare class Window_Base extends Window {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 	/**
@@ -40792,7 +40792,7 @@ export class Window_Base extends Window {
 	 * @param text
 	 * @returns {width:Int, height:Int}
 	 */
-	textSizeEx(text: string): {height: number, width: number};
+	textSizeEx(text: string): { height: number, width: number };
 	/**
 	 * Processes all the text in the window, then
 	 * flushes the text state.
@@ -41242,7 +41242,7 @@ export class Window_Base extends Window {
 	maxFontSizeInLine(line: string): number;
 }
 
-export class Window_Scrollable extends Window_Base {
+declare class Window_Scrollable extends Window_Base {
 	/**
 	 * Constructor for Window_Scrollable
 	 * @param rect
@@ -41362,7 +41362,7 @@ export class Window_Scrollable extends Window_Base {
 	paint(): void;
 }
 
-export class Window_Selectable extends Window_Scrollable {
+declare class Window_Selectable extends Window_Scrollable {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 	/**
@@ -41660,7 +41660,7 @@ export class Window_Selectable extends Window_Scrollable {
 	refresh(): void;
 }
 
-export class Window_Command extends Window_Selectable {
+declare class Window_Command extends Window_Selectable {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 	/**
@@ -41804,7 +41804,7 @@ export class Window_Command extends Window_Selectable {
  * The window for selecting an actor's action on the battle screen.
  * @class Window_ActorCommand
  */
-export class Window_ActorCommand extends Window_Command {
+declare class Window_ActorCommand extends Window_Command {
 	constructor();
 	/**
 	 * Adds the attack command to the actor command window.
@@ -41840,7 +41840,7 @@ export class Window_ActorCommand extends Window_Command {
 	selectLast(): void;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum GaugeType {
 		HP = "hp",
 		MP = "mp",
@@ -41849,7 +41849,7 @@ export namespace rm.types {
 	}
 }
 
-export class Window_StatusBase extends Window_Selectable {
+declare class Window_StatusBase extends Window_Selectable {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 	/**
@@ -41971,7 +41971,7 @@ export class Window_StatusBase extends Window_Selectable {
  * The window for displaying the status of party members on the battle screen.
  * @class Window_BattleStatus
  */
-export class Window_BattleStatus extends Window_StatusBase {
+declare class Window_BattleStatus extends Window_StatusBase {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 }
@@ -41983,7 +41983,7 @@ export class Window_BattleStatus extends Window_StatusBase {
  * The window for selecting a target actor on the battle screen.
  * @class Window_BattleActor
  */
-export class Window_BattleActor extends Window_BattleStatus {
+declare class Window_BattleActor extends Window_BattleStatus {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 	/**
@@ -42009,7 +42009,7 @@ export class Window_BattleActor extends Window_BattleStatus {
  * The window for selecting a target enemy on the battle screen.
  * @class Window_BattleEnemy
  */
-export class Window_BattleEnemy extends Window_Selectable {
+declare class Window_BattleEnemy extends Window_Selectable {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 	/**
@@ -42056,7 +42056,7 @@ export class Window_BattleEnemy extends Window_Selectable {
 	select(index: number): void;
 }
 
-export class Window_ItemList extends Window_Selectable {
+declare class Window_ItemList extends Window_Selectable {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 	/**
@@ -42082,7 +42082,7 @@ export class Window_ItemList extends Window_Selectable {
  * The window for selecting an item to use on the battle screen.
  * @class Window_BattleItem
  */
-export class Window_BattleItem extends Window_ItemList {
+declare class Window_BattleItem extends Window_ItemList {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 	includes(item: rm.types.UsableItem): boolean;
@@ -42096,7 +42096,7 @@ export class Window_BattleItem extends Window_ItemList {
  * handled as a window for convenience.
  * @class Window_BattleLog
  */
-export class Window_BattleLog extends Window_Base {
+declare class Window_BattleLog extends Window_Base {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 	setSpriteset(spriteset: Spriteset_Battle): void;
@@ -42184,7 +42184,7 @@ export class Window_BattleLog extends Window_Base {
 	makeTpDamageText(target: Game_Battler): string;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum SkillTypeIdA {
 		base = -1,
 	}
@@ -42197,7 +42197,7 @@ export namespace rm.types {
  * The window for selecting a skill on the skill screen.
  * @class Window_SkillList
  */
-export class Window_SkillList extends Window_Selectable {
+declare class Window_SkillList extends Window_Selectable {
 	constructor(rect: Rectangle);
 	_actor: Game_Actor;
 	/**
@@ -42268,7 +42268,7 @@ export class Window_SkillList extends Window_Selectable {
  * The window for selecting a skill to use on the battle screen.
  * @class Window_BattleSkill
  */
-export class Window_BattleSkill extends Window_SkillList {
+declare class Window_BattleSkill extends Window_SkillList {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 }
@@ -42280,7 +42280,7 @@ export class Window_BattleSkill extends Window_SkillList {
  * The window used for the event command [Show Choices].
  * @class Window_ChoiceList
  */
-export class Window_ChoiceList extends Window_Command {
+declare class Window_ChoiceList extends Window_Command {
 	constructor();
 	initialize(): void;
 	setMessageWindow(messageWindow: Window_Message): void;
@@ -42303,7 +42303,7 @@ export class Window_ChoiceList extends Window_Command {
  * The window for displaying switches and variables on the debug screen.
  * @class Window_DebugEdit
  */
-export class Window_DebugEdit extends Window_Selectable {
+declare class Window_DebugEdit extends Window_Selectable {
 	constructor(x: number, y: number, width: number);
 	itemName(dataId: number): string;
 	itemStatus(dataId: string): string;
@@ -42321,7 +42321,7 @@ export class Window_DebugEdit extends Window_Selectable {
  * The window for selecting a block of switches/variables on the debug screen.
  * @class Window_DebugRange
  */
-export class Window_DebugRange extends Window_Selectable {
+declare class Window_DebugRange extends Window_Selectable {
 	constructor(x: number, y: number);
 	windowWidth(): number;
 	windowHeight(): number;
@@ -42330,11 +42330,11 @@ export class Window_DebugRange extends Window_Selectable {
 	setEditWindow(editWindow: Window_DebugEdit): void;
 }
 
-export class Window_HorzCommand extends Window_Command {
+declare class Window_HorzCommand extends Window_Command {
 	constructor(x: number, y: number);
 }
 
-export class Window_EquipCommand extends Window_HorzCommand {
+declare class Window_EquipCommand extends Window_HorzCommand {
 	protected constructor();
 }
 
@@ -42345,7 +42345,7 @@ export class Window_EquipCommand extends Window_HorzCommand {
  * The window for selecting an equipment item on the equipment screen.
  * @class Window_EquipItem
  */
-export class Window_EquipItem {
+declare class Window_EquipItem {
 	constructor(x: number, y: number, width: number, height: number);
 	setActor(actor: Game_Actor): void;
 	setSlotId(slotId: number): void;
@@ -42361,7 +42361,7 @@ export class Window_EquipItem {
  * The window for selecting an equipment slot on the equipment screen.
  * @class Window_EquipSlot
  */
-export class Window_EquipSlot extends Window_Selectable {
+declare class Window_EquipSlot extends Window_Selectable {
 	constructor(x: number, y: number, width: number, height: number);
 	initialize(x: number, y: number, width: number, height: number): void;
 	/**
@@ -42410,7 +42410,7 @@ export class Window_EquipSlot extends Window_Selectable {
 	setItemWindow(itemWindow: Window_EquipItem): void;
 }
 
-export class Window_EquipStatus extends Window_Base {
+declare class Window_EquipStatus extends Window_Base {
 	protected constructor();
 }
 
@@ -42421,7 +42421,7 @@ export class Window_EquipStatus extends Window_Base {
  * The window used for the event command [Select Item].
  * @class Window_EventItem
  */
-export class Window_EventItem extends Window_ItemList {
+declare class Window_EventItem extends Window_ItemList {
 	constructor(messageWindow: Window_Message);
 	/**
 	 * Returns the height off the window.
@@ -42457,12 +42457,12 @@ export class Window_EventItem extends Window_ItemList {
  * The window for selecting "Go to Title" on the game end screen.
  * @class Window_GameEnd
  */
-export class Window_GameEnd extends Window_Base {
+declare class Window_GameEnd extends Window_Base {
 	constructor();
 	updatePlacement(): void;
 }
 
-export class Window_Gold extends Window_Base {
+declare class Window_Gold extends Window_Base {
 	constructor(x: number, y: number);
 	/**
 	 * Returns the $gameParty gold as a number.
@@ -42480,7 +42480,7 @@ export class Window_Gold extends Window_Base {
 	currencyUnit(): string;
 }
 
-export class Window_Help extends Window_Base {
+declare class Window_Help extends Window_Base {
 	constructor(rect: Rectangle);
 	/**
 	 * Sets the _text property of the window;
@@ -42499,7 +42499,7 @@ export class Window_Help extends Window_Base {
 	setItem(item: rm.types.BaseItem): void;
 }
 
-export class Window_ItemCategory extends Window_HorzCommand {
+declare class Window_ItemCategory extends Window_HorzCommand {
 	protected constructor();
 }
 
@@ -42510,7 +42510,7 @@ export class Window_ItemCategory extends Window_HorzCommand {
  * The window for displaying the map name on the map screen.
  * @class Window_MapName
  */
-export class Window_MapName extends Window_Base {
+declare class Window_MapName extends Window_Base {
 	constructor();
 	/**
 	 * Returns the window width.
@@ -42554,7 +42554,7 @@ export class Window_MapName extends Window_Base {
  * @class Window_MenuStatus
  * @extends {Window_Selectable}
  */
-export class Window_MenuStatus extends Window_Selectable {
+declare class Window_MenuStatus extends Window_Selectable {
 	/**
 	 * Creates an instance of Window_MenuStatus.
 	 * @param {number} x
@@ -42621,13 +42621,13 @@ export class Window_MenuStatus extends Window_Selectable {
 	setPendingIndex(index: number): void;
 }
 
-export class Window_MenuActor extends Window_MenuStatus {
+declare class Window_MenuActor extends Window_MenuStatus {
 	constructor();
 	initialize(): void;
 	selectForItem(item: rm.types.BaseItem): void;
 }
 
-export class Window_MenuCommand extends Window_Command {
+declare class Window_MenuCommand extends Window_Command {
 	constructor(x: number, y: number);
 	/**
 	 * Adds the standard game commands to the
@@ -42693,7 +42693,7 @@ export class Window_MenuCommand extends Window_Command {
 	static _lastCommandSymbol: any;
 }
 
-export class Window_Message extends Window_Base {
+declare class Window_Message extends Window_Base {
 	protected constructor();
 	/**
 	 * Returns the sub windows attached to the message window.
@@ -42861,7 +42861,7 @@ export class Window_Message extends Window_Base {
  * The window for displaying a speaker name above
  * the message window.
  */
-export class Window_NameBox extends Window_Base {
+declare class Window_NameBox extends Window_Base {
 	protected constructor();
 	/**
 	 * Sets the current message window.
@@ -42924,7 +42924,7 @@ export class Window_NameBox extends Window_Base {
  * The window for editing an actor's name on the name input screen.
  * @class Window_NameEdit
  */
-export class Window_NameEdit {
+declare class Window_NameEdit {
 	/**
 	 * Creates an instance of Window_NameEdit.
 	 * @param {Game_Actor} actor
@@ -43001,7 +43001,7 @@ export class Window_NameEdit {
  * The window for selecting text characters on the name input screen.
  * @class Window_NameInputt
  */
-export class Window_NameInput extends Window_Selectable {
+declare class Window_NameInput extends Window_Selectable {
 	constructor(editWindow: Window_NameEdit);
 	/**
 	 * Returns the window height.
@@ -43032,7 +43032,7 @@ export class Window_NameInput extends Window_Selectable {
 	static JAPAN3: string[];
 }
 
-export class Window_NumberInput extends Window_Selectable {
+declare class Window_NumberInput extends Window_Selectable {
 	constructor(messageWindow: Window_Message);
 	start(): void;
 	updatePlacement(): void;
@@ -43080,7 +43080,7 @@ export class Window_NumberInput extends Window_Selectable {
 	onButtonOk(): void;
 }
 
-export class Window_Options extends Window_Command {
+declare class Window_Options extends Window_Command {
 	constructor();
 	updatePlacement(): void;
 	addGeneralOptions(): void;
@@ -43103,18 +43103,18 @@ export class Window_Options extends Window_Command {
  * The window for selecting whether to fight or escape on the battle screen.
  * @class Window_PartyCommand
  */
-export class Window_PartyCommand extends Window_Command {
+declare class Window_PartyCommand extends Window_Command {
 	constructor();
 	setup(): void;
 }
 
-export namespace rm.windows {
+declare namespace rm.windows {
 	export type Info = {
 		key: string;
 	}
 }
 
-export class Window_SavefileList extends Window_Selectable {
+declare class Window_SavefileList extends Window_Selectable {
 	constructor(rect: Rectangle);
 	/**
 	 * Whether ornot the auto save feature is enabled
@@ -43170,7 +43170,7 @@ export class Window_SavefileList extends Window_Selectable {
  * is handled as a window for convenience.
  * @class Window_ScrollText
  */
-export class Window_ScrollText extends Window_Base {
+declare class Window_ScrollText extends Window_Base {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 	/**
@@ -43211,7 +43211,7 @@ export class Window_ScrollText extends Window_Base {
  * The window for selecting an item to buy on the shop screen.
  * @class Window_ShopBuy
  */
-export class Window_ShopBuy extends Window_Selectable {
+declare class Window_ShopBuy extends Window_Selectable {
 	/**
 	 * Creates an instance of Window_ShopBuy.
 	 * @param {number} x
@@ -43270,7 +43270,7 @@ export class Window_ShopBuy extends Window_Selectable {
  * The window for selecting buy/sell on the shop screen.
  * @class Window_ShopCommand
  */
-export class Window_ShopCommand extends Window_HorzCommand {
+declare class Window_ShopCommand extends Window_HorzCommand {
 	protected constructor();
 	_purchaseOnly: boolean;
 	/**
@@ -43291,7 +43291,7 @@ export class Window_ShopCommand extends Window_HorzCommand {
  * screen.
  * @class Window_ShopNumber
  */
-export class Window_ShopNumber extends Window_Selectable {
+declare class Window_ShopNumber extends Window_Selectable {
 	/**
 	 * Creates an instance of Window_ShopNumber.
 	 * @param {number} x
@@ -43410,7 +43410,7 @@ export class Window_ShopNumber extends Window_Selectable {
  * The window for selecting an item to sell on the shop screen.
  * @class Window_ShopSell
  */
-export class Window_ShopSell extends Window_ItemList {
+declare class Window_ShopSell extends Window_ItemList {
 	constructor(x: number, y: number, width: number, height: number);
 	/**
 	 * Determines if the item is sellable, otherwise, greyed out.
@@ -43422,7 +43422,7 @@ export class Window_ShopSell extends Window_ItemList {
 	isEnabled(item: rm.types.BaseItem): boolean;
 }
 
-export namespace rm.types {
+declare namespace rm.types {
 	export const enum EquipTypeId {
 		base = -1,
 	}
@@ -43436,7 +43436,7 @@ export namespace rm.types {
  * equipment on the shop screen.
  * @class Window_ShopStatus
  */
-export class Window_ShopStatus extends Window_Base {
+declare class Window_ShopStatus extends Window_Base {
 	/**
 	 * Creates an instance of Window_ShopStatus.
 	 * @param {number} x
@@ -43535,7 +43535,7 @@ export class Window_ShopStatus extends Window_Base {
  * The window for displaying the skill user's status on the skill screen.
  * @class Window_SkillStatus
  */
-export class Window_SkillStatus extends Window_Base {
+declare class Window_SkillStatus extends Window_Base {
 	/**
 	 * Creates an instance of Window_SkillStatus.
 	 * @param x
@@ -43567,7 +43567,7 @@ export class Window_SkillStatus extends Window_Base {
  * The window for selecting a skill type on the skill screen.
  * @class Window_SkillType
  */
-export class Window_SkillType extends Window_Command {
+declare class Window_SkillType extends Window_Command {
 	/**
 	 * Creates an instance of Window_SkillType.
 	 * @param  x
@@ -43597,7 +43597,7 @@ export class Window_SkillType extends Window_Command {
 	selectLast(): void;
 }
 
-export class Window_Status extends Window_StatusBase {
+declare class Window_Status extends Window_StatusBase {
 	constructor(rect: Rectangle);
 	initialize(rect: Rectangle): void;
 	/**
@@ -43671,7 +43671,7 @@ export class Window_Status extends Window_StatusBase {
  * The window for selecting New Game/Continue on the title screen.
  * @class Window_TitleCommand
  */
-export class Window_TitleCommand extends Window_Command {
+declare class Window_TitleCommand extends Window_Command {
 	protected constructor();
 	updatePlacement(): void;
 	isContinueEnabled(): boolean;
